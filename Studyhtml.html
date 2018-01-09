@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+   <tr>
+    <th>Fidelity</th>
+    <th>CUSTOMER SERVICE</th>
+    <th>OPEN AN ACCOUNT</th>
+    <th>REFER A FRIEND</th>
+    <th>LOG IN</th>
+   </tr>
+    <tr>
+        <td>Accounts & Trade</td>
+        <td>Planning & Advice</td>
+        <td>News & Research</td>
+        <td>Investment Products</td>
+        <td>Why Fidelity</td>
+    </tr>
+</table>
+<h2>Your tax information</h2>
+<p>Find tax forms, tools, and important resources on our tax information page.</p>
+<hr>
+<h1>Structure</h1>
+<form method="POST" action="/login">
+
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <input type="submit">
+</form>
+<hr>
+<h1>Submitting</h1>
+<input type="submit">
+
+<button type="submit">Submit the form</button>
+<hr>
+<input type="text" name="email" placeholder="Enter your email address">
+<input type="password" name="password">
+<hr>
+<h1>Text Inputs</h1>
+<textarea name="comment"></textarea>
+<hr>
+<h1>Checkboxes and Radio Buttons</h1>
+<input name="newsletter_signup" value="true" type="checkbox" checked>Sign Up For The Email Newsletter
+
+A <input type="radio" name="quiz_question_1" value="a"><br>
+B <input type="radio" name="quiz_question_1" value="b"><br>
+C <input type="radio" name="quiz_question_1" value="c"><br>
+D <input type="radio" name="quiz_question_1" value="d"><br>
+<hr>
+<h1>Selects</h1>
+<select name="coffee_preference">
+    <option value="light">Light Roast</option>
+    <option value="dark">Dark Roast</option>
+    <option value="espresso">Espresso Blend</option>
+</select>
+<hr>
+<h1>Hidden Inputs</h1>
+<input type="hidden" name="user_id" value="432">
+<hr>
+<h1>Name and Value</h1>
+<form>
+    <input name="the_answer" value="42">
+    <input type="submit">
+</form>
+<hr>
+<h1>Disabled</h1>
+<input type="text" name="username" value="codeup" disabled>
+
+<select name="newsletter_signup">
+    <option disabled value="n">No</option>
+    <option selected value="y">Yes</option>
+</select>
+<hr>
+<h1>Labels</h1>
+<label for="username">Username</label>
+<input id="username" name="username" type="text">
+
+<h2>What kind of phone do you own?</h2>
+<label for="android">
+    Android <input id="android" type="checkbox" name="phones" value="android">
+</label>
+<label for="ios">
+    iOS <input id="ios" type="checkbox" name="phones" value="ios">
+</label>
+<label for="windows">
+    Windows <input id="windows" type="checkbox" name="phones" value="windows">
+</label>
+<label for="other">
+    Other <input id="other" type="checkbox" name="phones" value="other">
+</label>
+<hr>
+
+</body>
+</html>
