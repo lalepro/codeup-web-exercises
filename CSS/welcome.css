@@ -1,0 +1,158 @@
+html {
+    background: url(../images/blueswirlback.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body>p {
+    font-family: SignPainter;
+    color: lavender;
+    font-stretch: expanded;
+    text-align: center;
+    font-size: 4em;
+}
+
+.centered {
+    display: block;
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto
+    /*box-sizing: border-box;*/
+}
+
+
+
+.section1 {
+    font-size: 35px;
+    font-family: "Kohinoor Bangla";
+    width: border-box;
+    /*height: 700px;*/
+    display: block;
+    position: relative;
+}
+
+.section1::after {
+    content: "";
+    background: url(../images/logo1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.section1 h2 {
+    text-decoration: underline;
+    font-size: 45px;
+}
+
+.h2 {
+    font-size: 4em;
+    color: #f7f7f7;
+    font-family: system-ui;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.fancy-header {
+    color: #eafff5;
+    text-align: center;
+    background-color: #9a09d426;
+    /*background-color: #1c2e712b;*/
+    background-width: 25%;
+    text-decoration: underline;
+    font-size: 7em;
+    font-style: initial;
+    /*font-family: 'oswald', sans-serif;*/
+    font-family: Georgia;
+}
+
+
+.section1 {
+    /*text-align: center;*/
+    color: #f7f7f7;
+    /*font-family: system-ui;*/
+    /*text-emphasis-color: cornsilk;*/
+
+}
+
+
+table, th, td {
+    border: 3px solid ghostwhite;
+    border-collapse: collapse;
+    text-align: center;
+    align-content: center;
+    font-size: 1.5em;
+    width: 60%;
+
+}
+
+.flex-item {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+table {
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    /*display: block;*/
+}
+table {
+    width: 90%;
+    font: 2em;
+}
+th {
+    height: 100px;
+}
+th, td {
+    width: 40%;
+    padding: 20px;
+    text-align: left;
+    color: White
+}
+
+
+tr:hover {background-color: #000000ba;}
+
+th {
+    /*background-color: -moz-visitedhyperlinktext;*/
+    color: White;
+    font-size: 3em;
+}
+
+a:link {
+    color: hotpink;
+}
+a:visited {
+    color: greenyellow;
+}
+a:hover {
+    color: yellow;
+}
+a:active {
+    color: white;
+}
+
+h2:hover {
+    background-color: #0e10106b;
+}
+
+footer {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
