@@ -19,3 +19,42 @@ background: url(https://) no-repeat center center fixed;
 -o-background-size: cover;
 background-size: cover;
 }
+
+SEMANTICS
+
+<article>	Defines an article
+    <aside>	Defines content aside from the page content
+        <details>	Defines additional details that the user can view or hide
+            <figcaption>	Defines a caption for a <figure> element
+                <figure>	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+                    <footer>	Defines a footer for a document or section
+                        <header>	Specifies a header for a document or section
+                            <main>	Specifies the main content of a document
+                                <mark>	Defines marked/highlighted text
+                                    <nav>	Defines navigation links
+                                        <section>	Defines a section in a document
+                                            <summary>	Defines a visible heading for a <details> element
+                                                <time>	Defines a date/time
+
+SECTION IMAGE:
+                                                    .section1 {
+                                                    width: 200;
+                                                    height: 500px;
+                                                    display: block;
+                                                    position: relative;
+                                                    }
+
+                                                    .section1::after {
+                                                    content: "";
+                                                    background: url(../images/logo1.png);
+                                                    background-repeat: no-repeat;
+                                                    background-position: center;
+                                                    background-size: contain;
+                                                    opacity: 0.3;
+                                                    top: 0;
+                                                    left: 0;
+                                                    bottom: 0;
+                                                    right: 0;
+                                                    position: absolute;
+                                                    z-index: -1;
+                                                    }

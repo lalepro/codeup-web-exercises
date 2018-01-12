@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    color: #f7f7f7;
+    font-family: system-ui;
+    background-image: url(https://pbs.twimg.com/media/DHTqZiJUQAEH1b5.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+main p {
+    will only style paragraphs in the main section
+}
+
+main, p{
+    will style main section and all paragraphs
+}
+
+main p span {
+    will only style the span in the <p> in the <main>
+}
+
+main>p{
+    direct desendant of main and not nested in div, section, article
+}
+
