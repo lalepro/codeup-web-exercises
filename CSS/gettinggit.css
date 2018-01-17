@@ -1,0 +1,288 @@
+.header {
+    background: #cf4646;
+    width: 100%;
+    height: 500px;
+    /*padding: px;*/
+}
+/*img {*/
+
+/*}*/
+#login {
+    text-decoration: underline;
+    color: white;
+    top: 40px;
+    right: 30px;
+    padding: 3px 8px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 3px;
+    transition: all .35s;
+    cursor: pointer;
+}
+#fancy-header {
+    /*position: center;*/
+    /*padding: 0;*/
+    width: 500px;
+    /*width="500"*/
+    /*padding: 30cm;*/
+    padding-top: 100px;
+    padding-left: 35%;
+    padding-bottom: 20px;
+}
+hr {
+    width: 50px;
+    height: 3px;
+    background: white;
+}
+.moto {
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    font-weight: 300;
+}
+
+.watch {
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    font-weight: 300;
+}
+
+.watch a {
+    color: #fff;
+    text-decoration: underline;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    /*position: absolute;*/
+    /*top: 50%;*/
+    font-size: larger;
+    color: white;
+    text-align: center;
+    text-shadow: 0.5px 0.5px #fff;
+    top: 40px;
+    right: 30px;
+    padding: 20px 20px;
+    /*position: absolute;*/
+    display: inline-block;
+    background: rgba(255, 255, 255, 0);
+    transition: all .35s;
+    cursor: pointer;
+    border-color: white;
+    border: 1px solid white;
+    border-top-left-radius: 15cm;
+    border-top-right-radius: 15cm;
+    border-bottom-left-radius:15cm;
+    border-bottom-right-radius: 15cm;
+
+}
+
+/*.button {*/
+
+
+/*}*/
+
+/*a {*/
+    /*color: red;*/
+    /*text-decoration: none;*/
+}
+.course {
+    text-align: center;
+    font-size: 24px;
+}
+
+video {
+}
+
+#wrapper {
+    text-align: center;
+}
+
+h3  {
+    font-size: 30px;
+    font-weight: 5;
+}
+
+p {
+    font-size: larger;
+}
+.sec {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    /*-webkit-column-count: 3;*/
+    position: relative;
+    /*text-align: center;*/
+    display: block;
+}
+
+/*.sec:nth-child(even) {*/
+    /*clear: both;*/
+/*}*/
+
+#sec1 {
+
+}
+
+#sec 2 {
+
+;
+}
+
+#sec 3  {
+
+;
+}
+
+#sec 4 {
+
+;
+}
+
+#sec 5 {
+
+}
+
+#sec6 {
+
+}
+
+span {
+    color: red;
+    background: lightpink;
+}
+#q {
+    color: whitesmoke;
+    font-size: 50px;
+    padding: 20px 0 0 0;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    font-weight: 300;
+}
+.ready {
+    background: #cf4646;
+    width: 100%;
+    height: 350px;
+    /*padding: px;*/
+}
+
+#endq {
+    padding: 80px 0 0 0;
+    text-align: center;
+    font-family: "Kohinoor Bangla";
+    font-style: 25px;
+}
+
+.redline {
+    background: #cf4646;
+}
+
+#close {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 10px;
+    
+}
+
+
+/*Learning about Modal https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+.modalForm {
+    padding: 10px 20px;
+    color: grey;
+    font-family: 'sans-serif';
+    font-size: 18px"
+}
+
+#username{
+    padding: 5px 20px 5px 20px;
+    font-family: "system-ui";
+    font-size: 20px;
+}
+
+#cardNumber {
+    padding: 5px 10px;
+    font-family: 'system-ui';
+    font-size: 18px;
+
+}
+
+#modalbutton {
+    background-color: deepskyblue;
+    padding: 5px 20px 5px 20px;
+    color: whitesmoke;
+    font-family: 'sans-serif';
+    font-size: 20px;
+    border-top-left-radius: 10cm;
+    border-top-right-radius: 10cm;
+    border-bottom-left-radius:10cm;
+    border-bottom-right-radius: 10cm;
+}
+
+/*-webkit-transition: opacity 400ms ease-in;*/
+/*-moz-transition: opacity 400ms ease-in;*/
+/*transition: opacity 400ms ease-in;*/
