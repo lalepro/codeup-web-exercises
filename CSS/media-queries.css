@@ -1,0 +1,141 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body>div>a {
+    visibility: hidden;
+    display: none;
+}
+
+h1 {
+
+    margin: 40px 0px 0px 0px;
+    font-size: 50px;
+    font-family: "Bangla Sangam MN";
+}
+
+nav {
+    text-align: center;
+}
+.nav-links {
+    padding: 0;
+    margin-right: 10px;
+    float: right;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+    list-style-type: none;
+
+}
+
+/*section {*/
+    /*float: left;*/
+    /*position: relative;*/
+/*}*/
+
+img {
+    width: 100%;
+    height: 385px;
+}
+
+div>section {
+    padding-right: 50px;
+    margin-right: 20%;
+}
+
+#main {
+    float: left;
+    width: 65%;
+    margin-right: 1%;
+}
+
+.sub-section {
+    font-style: italic;
+    float: right;
+    width: 33%;
+    margin-left: 1%;
+}
+footer {
+    margin-top: 40%;
+}
+
+footer > p {
+
+    float: left;
+    /*position: relative;*/
+}
+
+.fa {
+    font-size: 4em;
+}
+
+#social-media-links {
+    float: right;
+    margin-left: 80%;
+    display: inline-block;
+
+}
+/*.fa-facebook-official{*/
+   /*width:30px;*/
+    /*height: 30px;*/
+}
+/*Small Screen Viewing*/
+
+/*@media screen and (min-width:768px) {*/
+    /*div {*/
+        /*width: 25%;*/
+    /*}*/
+
+/*body>div {*/
+/*text-align: center;*/
+/*}*/
+
+/*body>div>a{*/
+/*text-decoration: none;*/
+/*color: black;*/
+/*top: 10px;*/
+/*padding: 8px 0;*/
+/*display: block;*/
+/*margin: 3px;*/
+/*border: 2px solid lightgrey;*/
+/*position: relative;*/
+/*background: #B8FFFA;*/
+/*cursor: pointer;*/
+/*box-sizing: border-box;*/
+/*}*/
+
+
+/*li {*/
+/*text-decoration: none;*/
+/*color: black;*/
+/*width: 100%;*/
+/*padding: 8px 0;*/
+/*display: block;*/
+/*list-style-type: none;*/
+/*margin: 7px;*/
+/*position: relative;*/
+/*background: lightgrey;*/
+/*cursor: pointer;*/
+/*box-sizing: border-box;*/
+/*}*/
+
+
+/*}*/
+
+@media screen and (min-width:992px) {
+    section {
+    width: 45%;
+    }
+     }
+
+/*@media screen and (min-width:1200px) {*/
+    /*section {*/
+
+    /*width: 25%;*/
+    /*}*/
+
+/*}*/
