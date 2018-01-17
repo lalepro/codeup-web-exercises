@@ -10,8 +10,8 @@ body>div>a {
 }
 
 h1 {
-
-    margin: 40px 0px 0px 0px;
+    float: left;
+    margin: 30px 0px 0px 0px;
     font-size: 50px;
     font-family: "Bangla Sangam MN";
 }
@@ -20,7 +20,7 @@ nav {
     text-align: center;
 }
 .nav-links {
-    padding: 0;
+    padding: 40px 0 0 0;
     margin-right: 10px;
     float: right;
 }
@@ -34,7 +34,7 @@ li {
 
 /*section {*/
     /*float: left;*/
-    /*position: relative;*/
+/*position: relative;*/
 /*}*/
 
 img {
@@ -64,71 +64,74 @@ footer {
 }
 
 footer > p {
-
     float: left;
     /*position: relative;*/
 }
 
 .fa {
-    font-size: 4em;
+    font-size: 1.5em;
+    padding: 5px;
+    float: right;
+    display: inline-block;
 }
 
 #social-media-links {
-    float: right;
+    float: left;
     margin-left: 80%;
-    display: inline-block;
+    list-style-type: none;
+    position: relative;
 
 }
 /*.fa-facebook-official{*/
    /*width:30px;*/
     /*height: 30px;*/
 }
-/*Small Screen Viewing*/
+Small Screen Viewing
 
-/*@media screen and (min-width:768px) {*/
-    /*div {*/
-        /*width: 25%;*/
-    /*}*/
+@media screen and (min-width:768px) {
+    div {
+        width: 25%;
+    }
 
-/*body>div {*/
-/*text-align: center;*/
-/*}*/
+body>div {
+text-align: center;
+}
 
-/*body>div>a{*/
-/*text-decoration: none;*/
-/*color: black;*/
-/*top: 10px;*/
-/*padding: 8px 0;*/
-/*display: block;*/
-/*margin: 3px;*/
-/*border: 2px solid lightgrey;*/
-/*position: relative;*/
-/*background: #B8FFFA;*/
-/*cursor: pointer;*/
-/*box-sizing: border-box;*/
-/*}*/
-
-
-/*li {*/
-/*text-decoration: none;*/
-/*color: black;*/
-/*width: 100%;*/
-/*padding: 8px 0;*/
-/*display: block;*/
-/*list-style-type: none;*/
-/*margin: 7px;*/
-/*position: relative;*/
-/*background: lightgrey;*/
-/*cursor: pointer;*/
-/*box-sizing: border-box;*/
-/*}*/
+body>div>a{
+text-decoration: none;
+color: black;
+top: 10px;
+padding: 8px 0;
+display: block;
+margin: 3px;
+border: 2px solid lightgrey;
+position: relative;
+background: #B8FFFA;
+cursor: pointer;
+box-sizing: border-box;
+}
 
 
-/*}*/
+li {
+text-decoration: none;
+color: black;
+width: 100%;
+padding: 8px 0;
+display: block;
+list-style-type: none;
+margin: 7px;
+position: relative;
+background: lightgrey;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+
+}
 
 @media screen and (min-width:992px) {
     section {
-    width: 45%;
+    width: 50%;
     }
      }
 
