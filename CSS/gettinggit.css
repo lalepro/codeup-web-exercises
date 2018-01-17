@@ -18,6 +18,7 @@
     border-radius: 3px;
     transition: all .35s;
     cursor: pointer;
+
 }
 #fancy-header {
     /*position: center;*/
@@ -122,6 +123,7 @@ p {
     position: relative;
     /*text-align: center;*/
     display: block;
+    /*float: left;*/
 }
 
 /*.sec:nth-child(even) {*/
@@ -286,3 +288,17 @@ span {
 /*-webkit-transition: opacity 400ms ease-in;*/
 /*-moz-transition: opacity 400ms ease-in;*/
 /*transition: opacity 400ms ease-in;*/
+
+/*@media screen and (min-width:500px) {*/
+    /*selector {*/
+        /*property: value;*/
+        /*width: 50%;*/
+    /*}*/
+/*}*/
+
+@media screen and (min-width:960px) and (max-width:1200px) {
+    .sec {
+        /*float: left;*/
+        width :25%;
+    }
+}
