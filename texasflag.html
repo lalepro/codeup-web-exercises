@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Texas Flag</title>
+    <style>
+        /*https://css-tricks.com/examples/ShapesOfCSS/*/
+        #star-five {
+            margin: 400px 80px 0 80px;
+            position: relative;
+            display: block;
+            color: white;
+            width: 0px;
+            height: 0px;
+            border-right:  100px solid transparent;
+            border-bottom: 70px  solid white;
+            border-left:   100px solid transparent;
+            -moz-transform:    rotate(35deg);
+            -webkit-transform: rotate(35deg);
+            -ms-transform:     rotate(35deg);
+            -o-transform:      rotate(35deg);
+
+        }
+        #star-five:before {
+            border-bottom: 80px solid white;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            -webkit-transform: rotate(-35deg);
+            -moz-transform:    rotate(-35deg);
+            -ms-transform:     rotate(-35deg);
+            -o-transform:      rotate(-35deg);
+
+        }
+        #star-five:after {
+            position: absolute;
+            display: block;
+            color: white;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid white;
+            border-left: 100px solid transparent;
+            -webkit-transform: rotate(-70deg);
+            -moz-transform:    rotate(-70deg);
+            -ms-transform:     rotate(-70deg);
+            -o-transform:      rotate(-70deg);
+            content: '';
+        }
+
+
+            .blue {
+                border: 1px solid navy;
+                background: navy;
+                width: 375px;
+                height: 100%;
+                position: absolute;
+                float: relative;
+            }
+
+        .white {
+            border: 1px solid whitesmoke;
+            background: white;
+            width: 75%;
+            height: 400px;
+            float: right;
+            position: page;
+        }
+
+        .red {
+            border: 1px solid red;
+            background: red;
+            width: 75%;
+            height: 400px;
+            float:right;
+            position: page;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="blue"><div id="star-five"></div></div>
+    <div class="white"></div>
+    <div class="red"></div>
+</body>
+</html>
