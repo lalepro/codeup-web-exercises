@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Git Branching</title>
+</head>
+<body>
+========= GIT BRANCHING
+
+Everything we have done is on the "master branch" in Git
+
+New best practice work flow...don't commit in the local master branch; always add and commit in another branch!
+
+--> FIRST STEP
+Create and switch to a new branch in your Git local repo
+(suggested branch name: yourName-exerciseOrFeature)...
+Command: git checkout -b "justin-box-model"
+
+--> SECOND STEP
+Add and commit changes as you normally would...
+Command: git add someFile, git commit someFile, etc.
+
+--> THIRD STEP
+Merge local branch with the local master branch...
+Commands:
+1) git checkout master
+2) git merge whateverBranchName
+
+OR
+
+Discard work from branch and DON'T merge with the local master branch...
+Commands:
+1) git checkout master
+optionally...
+2) git branch -D whateverBranchName (deletes the branch and all the work you committed!)
+
+--> FOURTH STEP
+Push up changes from local master branch to remote repository (GitHub repo)...
+Command: git push origin master
+
+To list all created branches...
+Command: git branch
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
