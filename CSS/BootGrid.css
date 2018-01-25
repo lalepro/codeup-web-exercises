@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #fff;
+
+}
+img {
+    border: 0.5em solid lightgrey;
+    width:500px;
+    position:relative;
+}
+
+#feature {
+    position: relative;
+}
+
+.ddsh {
+    float: left;
+    position: relative;
+}
+.ddshs {
+    float: left;
+    position: relative;
+}
+
+/*body > div > div > div.hidden-xs.col-sm-10.col-md-12.col-lg-12 {*/
+    /*position: relative;*/
+    /*left: ;*/
+/*}*/
+
+/*------xs devices default setting in Bootstrap-------*/
+
+@media (max-width: 767px) {
+    .select {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+
+        display: inline-block;
+    }
+
+}
+
+
+
+/*---------sm devices--------*/
+
+@media (min-width:768px) {
+    .select {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        float: left;
+    }
+}
+
+
+
+
+/*-----------medium devices-------*/
+
+@media (min-width:992px) {
+    img {
+        width:100%;
+        float: left;
+    }
+
+}
+
+
+
+
+/*------------lg and xl devices-------*/
+
+@media (min-width:1200px) {
+    img {
+        width:100%;
+        float: left;
+    }
+}
