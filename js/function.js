@@ -82,17 +82,17 @@
 //     return tip;
 // }
 
-
-
-function calculateTip(bill, tip) {
-    return "$" + (bill * tip/100);
-}
-
-var bill = prompt("What is the bill total?");
-var tip = prompt("What is the tip percent you'd like to leave?");
-
-
-console.log(alert("Please Leave " + calculateTip(bill, tip)));
+//
+//
+// function calculateTip(bill, tip) {
+//     return "$" + (bill * tip/100);
+// }
+//
+// var bill = prompt("What is the bill total?");
+// var tip = prompt("What is the tip percent you'd like to leave?");
+//
+//
+// console.log(alert("Please Leave " + calculateTip(bill, tip)));
 
 
 
