@@ -31,12 +31,12 @@
  */
 
 //
-// function sayHello(name){
-//     return "Hello" + " " + name;
-//
-// }
-// var helloMessage = sayHello("Laura")
-// console.log(helloMessage);
+function sayHello(name){
+    return "Hello" + " " + name;
+
+}
+var helloMessage = sayHello("Laura")
+console.log(helloMessage);
 //
 // var myName = "Laura"
 // console.log(sayHello(myName));
@@ -116,18 +116,18 @@
  */
 
 
-function applyDiscount(originalPrice, discountPercent){
-    return originalPrice - originalPrice * discountPercent;
-}
-
-
-
-var originalPrice = prompt("What is the bill total?");
-var discountPercent = prompt("What is the percentage of sale?");
-
-
-console.log(alert("Please Pay " + "$" + applyDiscount(originalPrice, discountPercent)));
+// function applyDiscount(originalPrice, discountPercent){
+//     return originalPrice - originalPrice * discountPercent;
+// }
 //
+//
+//
+// var originalPrice = prompt("What is the bill total?");
+// var discountPercent = prompt("What is the percentage of sale?");
+//
+//
+// console.log(alert("Please Pay " + "$" + applyDiscount(originalPrice, discountPercent)));
+// //
 
 /**
  * TODO:
@@ -143,3 +143,7 @@ console.log(alert("Please Pay " + "$" + applyDiscount(originalPrice, discountPer
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+
+
+
