@@ -49,33 +49,91 @@ function  isEven(number) {
 
 // Make a function named isPositive(number)
 
+function isPositive(number){
+    return number >= 0;
+}
+
 // Make a function named isNegative(number)
+
+function isNegative(number) {
+    return number <= 0;
+}
+
 
 // Make a function named isBoolean(input)
 
-// Make a function named isTrue(boolean)
+function isBoolean(input){
+    return input.toString();
+}
 
 // Make a function named isFalse(boolean)
+funtion isFalse(boolean){
+    return = 0;
+}
+
+// Make a function named isTrue(boolean)
+function isTrue(boolean){
+    return isNaN(boolean);
+}
 
 // Make a function named isTruthy(input)
+function isTruthy(input) {
+    return input == true;
+}
 
 // Make a function named isFalsy(input)
+function isFalsy(input){
+    return input == false;
+}
 
 // Make a function named isVowel(letter)
+function isVowel(letter) {
+    if (letter == "a" || letter == "i" || letter == "e" || letter == "o" || letter == "u")
+    {
+        return true;
+    }
+    return false
+}
+
 
 // Make a function named hasVowels(string) that uses isVowel to check if a string has any vowels
 
-// Make a function named isConsonant(letter)
+function hasVowels(string) { 
+    return string.indexOf(isVowel();
+}
 
-// Make a function named hasConsonants(string)
+// Make a function named isConsonant(letter)
+function isConsonant(letter) {
+    if (letter == "a" || "i" || "e" || "o" || "u") {
+        return false;
+    }
+    return true;
+}
+
+
+// M return false
+
+var M = "false";                                                                                                               ake a function named hasConsonants(string)
 
 // Make a function named isCapital(letter)
+function isCapital(letter){
+    return letter.charAt(0) !== letter.charAt(0).toUpperCase();
+
+}
 
 // Make a function named hasCapitalLetters(string) that returns if a string has any capitals.
+function hasCapital
+
 
 //     Make a function named isLowerCase(letter)
+function isLowerCase(letter){
+   return letter.charAt(0) !== letter.charAt.UpperCase();
+}
 
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased
+
+
+
 
 // Make a function named isSpace(letter) that returns if a character is a space character
 
