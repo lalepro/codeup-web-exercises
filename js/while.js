@@ -5,12 +5,12 @@
 var i = 2;
 while (i<= 65536) {
     console.log(i);
-    i = i * 2;
+    i *= 2;
 }
 
 
-
-Ice Cream cones
+//
+// Ice Cream cones
 
 var allCones = Math.floor(Math.random() * 50) + 50;
 
