@@ -264,6 +264,37 @@ function calculateTotal(number) {
 //         Example: dayOfTheWeekStartsWithT("Tuesday")     => returns true
 //         Example: dayOfTheWeekStartsWithT("Tommy")     => returns false
 //
+
+
+
+function dayOfTheWeekStartsWithT(input) {
+    input = input.toLowerCase();
+
+    if(input == "tuesday" || input == "thursday") {
+        return true;
+    } else {
+        return false;}
+}
+
+
+//OR
+
+function daysOfTheWeekStartsWithT(input) {
+    return input.toLowerCase() == "tuesday" || input.toLowerCase() == "thursday";
+}
+
+
+//OR
+
+function daysOfTheWeekStartsWithT(input) {
+    input = input.toLowerCase();
+    return input == "tuesday" || input == "thursday";
+}
+
+
+
+
+
 //         Bonus 2.
 //         Write a function, isValidPassword, that takes in a string argument and returns true or false
 //         depending on whether or not all the following conditions are true:
@@ -273,27 +304,4 @@ function calculateTotal(number) {
 // 4) Only comprised of letters and numbers
 // 5) EXTRA BONUS: is not the same forwards and backwards
 
-var string = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-function dayOfTheWeekStartsWithT(string) {
-
-    switch (string) {
-                case
-                string[0] === "T" + string.substring(1):
-                    return true;
-                    break;
-
-                case
-                string[0] !== "T" + string.substring(1) :
-                    return false;
-                    break;
-
-        case string: "Tuesday" || "Thursday";
-            return true;
-            break;
-
-        case string: ;
-            return false;
-
-            }
-        }

@@ -56,7 +56,7 @@ function isPositive(number){
 // Make a function named isNegative(number)
 
 function isNegative(number) {
-    return number <= 0;
+    return number < 0;
 }
 
 
@@ -131,13 +131,40 @@ function isLowerCase(letter){
 }
 
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased
-
+   function hasLowerCase(string){
+          return (/[a-z]/.test(string));
+   }
 
 
 
 // Make a function named isSpace(letter) that returns if a character is a space character
 
+function isSpace(letter) {
+     letter.trim() === '' ? console.log("true") : console.log("false");
+
+}
+
+//OR
+
+function isSpace(letter) {
+    return letter.trim() === '';
+}
+
+//OR
+
+function isSpace(letter) {
+    if (letter.trim() === '') {
+        return true;
+    } else {                 
+        return false;
+    }
+}
+
 // Make a function named hasSpaces(string) that returns if a string has any space characters
+function hasSpace(input) {
+    return input.indexOf(' ') >= 0;
+}
+
 
 // Make a function named isZero(number)
 
@@ -152,27 +179,74 @@ function isLowerCase(letter){
 //     Make a function named isMultipleOfFive(input)
 
 // Make a function named isThree(input)
+function isThree(input){
+       return input === 3;
+}
 
 // Make a function named isMultipleOfThree(input)
 
+function isMultipleOfThree(input){
+     return input % 3 === 0;
+    }
+
 // Make a function named isMultipleOfThreeAndFive(input)
+
+function isMultipleOfThreeAndFive(input){
+    return input % 3 === 0 && input % 5 === 0;
+}
 
 // Write a function named lowerCase(string)
 
-// Write a function named capitalizeEachWord(string) uses capitalize to return a string where each new word (separated by a space) is capitalized.
+function lowerCase(string){
+     return string.toLowerCase();
+}
+
+
+// ??Write a function named capitalizeEachWord(string) uses capitalize to return a string where each new word (separated by a space) is capitalized.
+
+function capitalizeEachWord(string) {
+    return string.toUpperCase() && string.split('').join(' ');
+  }
+
 
 //     Write a function named add(a, b) that returns the sum of a and b
 
+function add(a, b) {
+    var x = a + b;
+    return x;
+}
+
+
 // Write a function named subtract(a, b) that returns a minus b
+
+function subtract(a, b){
+    var x = a - b;
+    return x;
+}
 
 // Write a function named multiply(a, b) that returns the product of a times b
 
+function multiply(a, b){
+    return a * b;
+}
+
 // Write a function named divide(a, b) that returns a divided by b
-
+  function divide(a, b){
+    return a / b;
+  }
 // Write a function named remainder(a, b) that returns the remainder after dividing a by b
-
+ function remainder(a, b){
+    return a % b;
+ }
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
-
+    function isBlank(input){
+    if (input = input.indexOf("")){
+        console.log("Character has space");
+        } else if (input = line\;) {
+        console.log("Newline Character");
+        } else ()
+    }
+    
 //     Make a function named isNumeric(input) returns true/false if the input is a number or numeric string
 
 // Make a function named trim(string) that removes empty spaces before and after the input.
