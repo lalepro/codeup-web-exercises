@@ -37,23 +37,23 @@ function sayHello(name){
 }
 var helloMessage = sayHello("Laura")
 console.log(helloMessage);
-//
-// var myName = "Laura"
-// console.log(sayHello(myName));
-//
+
+var myName = "Laura"
+console.log(sayHello(myName));
 
 
 
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
 
-// var random = Math.floor((Math.random() * 3) + 1);
-//
-// function isTwo(random){
-//     return random == 2;
-// }
-//
-// console.log(random + " " + isTwo(random));
+Don't modify the following line, it generates a random number between 1 and 3
+and stores it in a variable named random
+
+var random = Math.floor((Math.random() * 3) + 1);
+
+function isTwo(random){
+    return random == 2;
+}
+
+console.log(random + " " + isTwo(random));
 
 
 
@@ -75,24 +75,24 @@ console.log(helloMessage);
  * number)
  */
 
-//
-// function calculateTip(a, b){
-//     var bill = a;
-//     var tip = a * b;
-//     return tip;
-// }
 
-//
-//
-// function calculateTip(bill, tip) {
-//     return "$" + (bill * tip/100);
-// }
-//
-// var bill = prompt("What is the bill total?");
-// var tip = prompt("What is the tip percent you'd like to leave?");
-//
-//
-// console.log(alert("Please Leave " + calculateTip(bill, tip)));
+function calculateTip(a, b){
+    var bill = a;
+    var tip = a * b;
+    return tip;
+}
+
+
+
+function calculateTip(bill, tip) {
+    return "$" + (bill * tip/100);
+}
+
+var bill = prompt("What is the bill total?");
+var tip = prompt("What is the tip percent you'd like to leave?");
+
+
+console.log(alert("Please Leave " + calculateTip(bill, tip)));
 
 
 
@@ -116,18 +116,18 @@ console.log(helloMessage);
  */
 
 
-// function applyDiscount(originalPrice, discountPercent){
-//     return originalPrice - originalPrice * discountPercent;
-// }
+function applyDiscount(originalPrice, discountPercent){
+    return originalPrice - originalPrice * discountPercent;
+}
+
+
+
+var originalPrice = prompt("What is the bill total?");
+var discountPercent = prompt("What is the percentage of sale?");
+
+
+console.log(alert("Please Pay " + "$" + applyDiscount(originalPrice, discountPercent)));
 //
-//
-//
-// var originalPrice = prompt("What is the bill total?");
-// var discountPercent = prompt("What is the percentage of sale?");
-//
-//
-// console.log(alert("Please Pay " + "$" + applyDiscount(originalPrice, discountPercent)));
-// //
 
 /**
  * TODO:
