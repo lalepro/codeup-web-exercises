@@ -65,13 +65,17 @@ second(numbers);
 last(numbers);
 
 function first(input){
-    console.log(input.length -4);
+    console.log(input[0]);
 }
 function second(input){
-    console.log(input.length -3);
+    console.log(input[1]);
 }
 
 function last(input){
     console.log(input.length -1);
 }
+
+//------------
+
+Array.isArray([0])
 

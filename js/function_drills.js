@@ -252,3 +252,412 @@ function multiply(a, b){
 // Make a function named trim(string) that removes empty spaces before and after the input.
 
 
+
+function isBoolean(input) {
+    return typeof input == "boolean";
+}
+
+
+
+function isNumeric(input) {
+    return !isNaN(input);
+}
+
+//answer below need to study below option and understand parseFloat beter
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n) && isFinite(n));
+}
+
+//got string really wrong
+
+function isString(input) {
+    if (typeof input === 'boolean') {
+        return 'true';
+    }
+}
+//string done right below: needed to write string not boolean
+
+function isString(input) {
+    return typeof input === "string";
+}
+
+//issues with ARRAY, PLEASE STUDY
+
+function isArray(input) {
+    if(toString.call(input) === "[object Array]"){
+        return true;
+    }
+}
+//correct array below: Array.isArray() is a function unless Array is defined
+
+function isArray(input) {
+    return Array.isArray(input);
+}
+
+
+
+function isNegative(input) {
+    return input < 0;
+}
+
+//alternative isNegative below and either way works but this
+// shows you how to add a function to a function.
+
+function isNegative(input) {
+    if(isNumeric(input)) {
+        return input < 0;
+    }
+    return false;
+}
+
+
+function isPositive(input) {
+    if(input > 0) {
+        return;
+    } else if(input = isNaN) {
+        return false;
+    }
+}
+
+// study isPostive function. below. Study PARSE FLOAT
+
+function isPositive(input) {
+    return parseFloat(input) > 0;
+}
+
+
+function increment(input) {
+    if(typeof input === 'boolean' && isNaN) {
+        return false;
+    } else if(input !== typeof " " && 'number') {
+        return input + 1;
+    }
+}
+
+//increment teacher solution below
+function increment(input) {
+    if(isNumeric(input)) {
+        return ++input;
+    } else {
+        return false;
+    }
+}
+// ternary alternative
+function increment(input) {
+    return (isNumeric(input)) ? ++input : false;
+}
+
+
+
+function decrement(input) {
+    if(input === typeof " ") {
+        return 'false';
+    } else {
+        return input - 1;
+    }
+}
+
+//decrement alternative
+
+function decrement(input) {
+    return (isNumeric(input)) ? --input : false;
+}
+
+function square(input) {
+    if(input !== typeof " " && 'number') {
+        return input * input;
+    } else if(typeof input === 'boolean' && isNaN) {
+        return "false";
+    }
+}
+
+//techer below
+
+function square(input) {
+    return (isNumberic(input)) ? input * input : false;
+}
+
+//*********************************
+
+
+function upperCase(input){
+    if(typeof input === typeof " ") {
+        return input.toUpperCase();
+    } else {
+        return "false";
+    }
+}
+
+//teacher noteCard study parseInt!!!!
+
+function upperCase(input){
+    if(isString(input) && !isNumeric(input)){
+        return input.toUpperCase();
+    }
+    return false;
+}
+
+
+
+function isPalindrome(myString) {
+    if(typeof myString === typeof " ") {
+        var prepString = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+        var output = prepString.split('').reverse().join('');
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Palindrome teacher on Slack
+
+function getHighestNumber(x, y , z){
+    var points = [x, y, z];
+
+    if(points === 'number'){
+        var order = points.sort[x, y, z];
+        return order[0];
+    }
+}
+
+
+
+// Long go to slack for complete answer to getHighestNumber
+
+function getHighestNumber(arg1, arg2, arg3) {
+    // return Math.max(arg1, arg2, arg3);
+
+    if(isNumeric(arg1) && isNumeric(arg2) && isNumeric(arg3)) {
+        if(arg1 > arg2 && arg 1 > arg2) {
+            return arg1;
+        } if(arg2 > arg3 && arg2 > arg1) {
+            return arg2;
+        } if (arg3 > arg2 && arg3 > arg1){
+            return arg3;
+        }
+    }
+}
+
+
+
+function containsVowel(letter) {
+    if (letter == "a" || letter == "i" || letter == "e" || letter == "o" || letter == "u")
+    {
+        return true;
+    }
+    return false
+}
+
+
+// _________TEACHER CONTAINSVOWEL
+
+function containsVowel(input){
+    if(typeof  input !== "string" || isNumeric(input)){
+        return false;
+    } else {
+        return input.includes("a") || input.includes("e") || input.includes("i") || input.includes("o") || input.includes("u");
+    }
+}
+
+
+
+function add(a, b) {
+    var x = a + b;
+    return x;
+}
+
+//Teacher below
+
+
+function add(a, b) {
+    if (isNumeric(a) && isNumeric(b)) {
+        return parseFloat(a) + parseFloat(b);
+    } else{
+        return false;
+    }
+}
+
+
+function multiply(x, y) {
+    if (isNaN(x || y)) {
+        return 'false';
+    }
+}
+
+//TEACHER BELOW parseFloat takes a string number and makes it a number, INT does something to decimals
+
+function add(a, b) {
+    if (isNumeric(a) && isNumeric(b)) {
+        return parseFloat(a) * parseFloat(b);
+    } else{
+        return false;
+    }
+}
+
+
+//question 16 didint do. below is teachers
+
+function sumOfSquares(a, b) {
+    if (isNumeric(a) && isNumeric(b)) {
+        return square(a) + square(b);
+    } else {
+        return false;
+    }
+}
+
+
+
+
+
+
+
+
+
+/**
+ * TODO:
+ * Create a function called 'sayHello' that takes a parameter 'name'.
+ * When called, the function should return a message that says hello to the passed in name.
+ *
+ * Example
+ * > sayHello("codeup") // returns "Hello, codeup!"
+ */
+//****************************************************************
+
+
+
+/**
+ * TODO:
+ * Call the function 'sayHello' and pass your name as a string literal argument.
+ * Store the result of the function call in a variable named 'helloMessage'.
+ *
+ * console.log 'helloMessage' to check your work
+ */
+
+/**
+ * TODO:
+ * Store your name as a string in a variable named 'myName', and pass that
+ * variable to the 'sayHello' function. You should see the same output in the
+ * console.
+ */
+
+//
+function sayHello(name){
+    return "Hello" + " " + name;
+
+}
+var helloMessage = sayHello("Laura")
+console.log(helloMessage);
+
+var myName = "Laura"
+console.log(sayHello(myName));
+
+
+
+
+Don't modify the following line, it generates a random number between 1 and 3
+and stores it in a variable named random
+
+var random = Math.floor((Math.random() * 3) + 1);
+
+function isTwo(random){
+    return random == 2;
+}
+
+console.log(random + " " + isTwo(random));
+
+
+
+/**
+ * TODO:
+ * Create a function called 'isTwo' that takes a number as a parameter.
+ * The function should return a boolean value based on whether or not the passed
+ * number is the number 2.
+ *
+ * Example
+ * > isTwo(1) // returns false
+ * > isTwo(2) // returns true
+ * > isTwo(3) // returns false
+ *
+ * Call the function 'isTwo' passing the variable 'random' as a argument.
+ *
+ * console.log *outside of the function* to check your work (you should see a
+ * different result everytime you refresh the page if you are using the random
+ * number)
+ */
+
+
+function calculateTip(a, b){
+    var bill = a;
+    var tip = a * b;
+    return tip;
+}
+
+
+
+function calculateTip(bill, tip) {
+    return "$" + (bill * tip/100);
+}
+
+var bill = prompt("What is the bill total?");
+var tip = prompt("What is the tip percent you'd like to leave?");
+
+
+console.log(alert("Please Leave " + calculateTip(bill, tip)));
+
+
+
+/**
+ * TODO:
+ * Create a function named 'calculateTip' to calculate a tip on a bill at a
+ * restaurant. The function should accept a tip percentage and the total of the
+ * bill, and return the amount to tip
+ *
+ * Examples:
+ * > calculateTip(0.20, 20) // returns 4
+ * > calculateTip(0.25, 25.50) // returns 6.37
+ * > calculateTip(0.15, 33.42) // returns 5.013
+ */
+
+/**
+ * TODO:
+ * Use prompt and alert in combination with your calculateTip function to
+ * prompt the user for the bill total and a percentage they would like to tip,
+ * then display the dollar amount they should tip
+ */
+
+
+function applyDiscount(originalPrice, discountPercent){
+    return originalPrice - originalPrice * discountPercent;
+}
+
+
+
+var originalPrice = prompt("What is the bill total?");
+var discountPercent = prompt("What is the percentage of sale?");
+
+
+console.log(alert("Please Pay " + "$" + applyDiscount(originalPrice, discountPercent)));
+//
+
+/**
+ * TODO:
+ * Create a function named `applyDiscount`. This function should accept a price
+ * (before a discount is applied), and a discount percentage (a number between 0
+ * and 1). It should return the result of applying the discount to the original
+ * price.
+ *
+ * Example:
+ * > var originalPrice = 100;
+ * > var dicountPercent = .2; // 20%
+ * > applyDiscount(originalPrice, dicountPercent) // 80
+ *
+ * > applyDiscount(45.99, 0.12) // 40.4712
+ */
+
+
+
+
+
+
+

@@ -62,7 +62,6 @@ window.confirm("Do you have a favorite color?")
     if (confirm) {
         var colors = prompt("What is your favorite color?");
 
-
         function analyzeColor(colors) {
             var message;
 
