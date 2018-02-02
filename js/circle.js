@@ -17,18 +17,18 @@
         },
 
         logInfo: function (doRounding) {
+            var result = this.getArea();
             // TODO: complete this method.
-            var finalArea = 0;
             if (doRounding) {
-                finalArea = Math.round(this.getArea());
+                result = Math.round(this.getArea());
             } else {
-                finalArea = this.getArea();
+                result = this.getArea();
             }
 
-            finalArea = (doRounding) ? Math.round(this.getArea()) : this.getArea();
+            result = (doRounding) ? Math.round(this.getArea()) : this.getArea();
             var outputMessage = "Area of a circle with radius: ";
             outputMessage += this.radius + ", is: ";
-            outputMessage += finalArea;
+            outputMessage += result;
 
             console.log(outputMessage);
         }
@@ -50,4 +50,5 @@
     circle.logInfo(false);
     console.log("Circle information rounded to the nearest whole number");
     circle.logInfo(true);
+
 })();

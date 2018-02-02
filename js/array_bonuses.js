@@ -173,10 +173,10 @@ function multiply(numbers) {
 console.log(multiply(numbers));
 
 
-
-//adding our removing first element arrays= array.shift() && array.unshift()
-
-//pop and push removes lasts element =pop && push=adds a new element to the end
+//
+// adding our removing first element arrays= array.shift() && array.unshift()
+//
+// pop and push removes lasts element =pop && push=adds a new element to the end
 //
 //
 // ================================= ARRAY MANIPULATION
