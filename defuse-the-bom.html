@@ -20,6 +20,7 @@
         updateTimer();
     }, 1000);
 
+
     function updateTimer() {
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
@@ -31,10 +32,20 @@
         detonationTimer--;
     }
 
+    setInterval(function () {
+        updateTimer();
+    }, 1000);
+
+    //_____________-------____________-------_______________------_______---OR
+
+
+    var intervalID = setInterval(upperCaseAll, 1000);
+
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-
+        console.log("defuseTheBom function.");
+        clearInterval(intervalID);
     }
 
     // Don't modify anything below this line!
@@ -49,3 +60,15 @@
 
 
 </body></html>
+
+
+var intervalID = setInterval(function() {
+    document.body.innerText += "Hi! ";
+}, 1000)
+
+
+setInterval(function() {
+document.body.innerText += "BYE! ";
+}, 500)
+
+clearInterval(var)

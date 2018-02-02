@@ -5,7 +5,7 @@ var houseneeds = [
     {
         wants: {
             darby: {
-                location: "walkable to hipster stuff",
+                location: "walkable to hip things to do",
                 price: "affordable",
                 safe: "security system",
                 design: "high ceilings or open area",
@@ -27,11 +27,11 @@ var houseneeds = [
                 }
 
                 }
-            }
+            },
         dont: {
             darby: {
                 pricy: "don't want to spend over 200k",
-                location: "far away from downtown"
+                location: "far away from downtown or far from work"
             },
             laura: {
                 moneyPit: "don't want to be throwing extra money into house",
