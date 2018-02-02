@@ -40,6 +40,9 @@
 
     console.log("<ul>" + myList + "</ul>");
 
+    document.write(myList);
+
+
 
 
 })();
