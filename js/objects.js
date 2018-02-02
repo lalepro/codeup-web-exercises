@@ -202,16 +202,16 @@ console.log(human.sayHello());
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    // var books = [];
-    //
-    // function createBook(title, author) {
-    //     return {
-    //         title: title,
-    //         author: author
-    //     }
-    // }
-    // var book = createBook("To Kill A Mockingbird", "Harper Lee");
-    // console.log(book);
+    var books = [];
+
+    function createBook(title, author) {
+        return {
+            title: title,
+            author: author
+        }
+    }
+    var book = createBook("To Kill A Mockingbird", "Harper Lee");
+    console.log(book);
 
 
 
