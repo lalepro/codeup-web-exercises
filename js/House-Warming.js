@@ -46,7 +46,16 @@ var houseneeds = [
         }
 ];
 
+    var output = '';
+    var house = houseneeds;
 
+houseneeds.forEach(function (need, index) {
+
+    output += house + this.wants + this.dont;
+    console.log(output);
+});
+
+document.write(output);
 
 // wants: affordable, near stuff, walkable to fun things.
 //     No need for lawn mower.  Open area - dont need open
