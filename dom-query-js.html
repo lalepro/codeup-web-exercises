@@ -25,26 +25,61 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="headBtn">Click Me!</button>
+<button id="subheadBtn">Oh! Hello</button>
+<button id="listBtn">Feeling Blue?</button>
+<button id="subIdBtn">Last Chance</button>
+<button id="mission">Game Over</button>
+
+<h3><time>00:00:00</time></h3>
+<button id="start">start</button>
+<button id="stop">stop</button>
+<button id="clear">clear</button>
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
+
+        //____-----____-----__----Variables to control and change main-header w/ a button
+
         var mainHeader = document.getElementById("main-header");
+        var firstBtn = document.getElementById("headBtn");
+
+        function titleChange(){
+            mainHeader.innerHTML= "JavaScript is Cool!!!";
+            mainHeader.style.color = "purple";
+            mainHeader.style.textDecoration = "underline"
+        }
+
+        firstBtn.addEventListener("click", titleChange);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        console.log(mainHeader.innerHTML= "JavaScript is Cool");
+        // console.log(mainHeader.innerHTML= "JavaScript is Cool");
+        //______------_______----_______--------________--------_________-----
+
+
+        //-----___________-------______--sub header changes color w/ 2nd button
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
+        var secondBtn = document.getElementById("subheadBtn")
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
 
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-        for (var i = 0; i < listItems.length; i += 1) {
-            console.log(listItems[i]);
+        function blueStart (){
+            subHeader.style.color = "blue";
         }
+
+        secondBtn.addEventListener("click", blueStart);
+
+        //----------_______------_________------_________------____________----
+        // TODO: Uncomment the next line and get all list items
+        // var listItems = document.getElementsByTagName("li");
+
+        // for (var i = 0; i < listItems.length; i += 1) {
+        //     console.log(listItems[i]);
+        // }
 
         // TODO: Set text color on every other list item to grey
         // for (var i = 0; i < listItems.length; i += 2)
@@ -56,20 +91,49 @@
         // console.log(listItems[0].style.color = "blue"); NOT GOOD PRACTICE
 
         var listItems = document.getElementsByTagName("li");
+        var blueFirst = document.getElementById("listBtn");
+        var greyAlt = document.getElementById("subIdBtn");
 
         console.log(listItems);
 
-        for (var i = 0; i < listItems.length; i++) {
-            var dbId = listItems[i].getAttribute("data-dbid");
-            console.log(dbId);
+        function blueColor() {
 
-            if (dbId == 1) {
-                listItems[i].style.color = "blue";
-            }
-            if (dbId % 2 === 0) {
-                listItems[i].style.color = "grey";
+            for (var i = 0; i < listItems.length; i++) {
+                var dbId = listItems[i].getAttribute("data-dbid");
+
+                console.log(dbId);
+
+                if (dbId == 1) {
+                    listItems[i].style.color = "blue";
+                }
+
+                if (dbId % 2 === 0) {
+                    // listItems[i].style.color = "grey";
+                }
             }
         }
+        //________________-------------________________----------------___________________--
+
+        function greyColors() {
+
+            for (var i = 0; i < listItems.length; i++) {
+                var dbId = listItems[i].getAttribute("data-dbid");
+
+                console.log(dbId);
+
+                if (dbId == 1) {
+                    // listItems[i].style.color = "blue";
+                }
+
+                if (dbId % 2 === 0) {
+                    listItems[i].style.color = "grey";
+                }
+            }
+        }
+        blueFirst.addEventListener("click", blueColor);
+
+        greyAlt.addEventListener("click", greyColors);
+
 
         //THIS LOOP RUNS THE BLUE AND GREY REQUIREMENTS
 
@@ -77,10 +141,14 @@
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
-
+        var lastBtn = document.getElementById("mission");
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
 
+        function finalBtn() {
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        }
+
+        lastBtn.addEventListener("click", finalBtn);
 
         // DOM BONUS
         // Create a list maker that confirms with the user if they wish to add an entry to a list.
@@ -88,6 +156,59 @@
         //     items and then add them to the HTML of the page. If the user confirms not to add another
         // item, end the cycle of user dialogue functions and apply styling to the page using JS only.
 
+        var h3 = document.getElementsByTagName('h3')[0],
+            start = document.getElementById('start'),
+            stop = document.getElementById('stop'),
+            clear = document.getElementById('clear'),
+            seconds = 0, minutes = 0, hours = 0,
+            t;
+
+        function add() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+
+            h3.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+            timer();
+        }
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
+        timer();
+
+
+        /* Start button */
+        start.onclick = timer;
+
+        /* Stop button */
+        stop.onclick = function() {
+            clearTimeout(t);
+        }
+
+        /* Clear button */
+        clear.onclick = function() {
+            h3.textContent = "00:00:00";
+            seconds = 0; minutes = 0; hours = 0;
+        }
+
+
+    //     BONUS Exercise:
+    //         Create a stop watch app with the following features:
+    //         1) stop watch display that shows the time to the nearest 100th of a second
+    // 2) start button to start the stop watch
+    // 3) reset button to reset the time to zero
+    // 4) pause button to stop the stop watch
+    // Additional Features:
+    //     1) store a list of times in an aside div that are appended to every time the reset button is hit
+    // 2) add delete buttons for each stored time that removes the time from the aside div
+    // 3) add keyboard events to control starting, pausing, and resetting
 
 
     })();
