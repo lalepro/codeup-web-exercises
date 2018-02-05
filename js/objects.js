@@ -187,7 +187,7 @@ console.log(human.sayHello());
 
     })
 
-    documen.write(output);
+    document.write(output);
 
 
 
