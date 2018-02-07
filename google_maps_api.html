@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style type="text/css">
+        #map-canvas {
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="background: #e5e5e5; text-align: center">My Top San Antonio Dining!!</h1>
+
+<button data-zoom=5 class="zoom">Zoom x 5</button>
+<button data-zoom=10 class="zoom">Zoom x 10</button>
+<button data-zoom=15 class="zoom">Zoom x 15</button>
+<button data-zoom=18 class="zoom">Zoom x 18</button>
+<button data-zoom=20 class="zoom">Zoom x 20</button>
+
+<!--_--__--_--_-_-_MAP--__-_--_-_-_----_------>
+
+<div id="map-canvas"></div>
+
+<!--__-_-----_----_-_-_-_--_--SEARCH FORM--_----_--_----_----_--_-_--_-_--_-_--_-->
+<input id="fill" type="text" placeholder="Enter Address Here">
+
+
+<!---_-------_--_--_--_--_-_--_-__-BUTTON---_-----__--------__---------_--_--_-_--->
+<button id="searchBtn">Search Map</button>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk9B2-ceAxVqWgzCrNI9FT7vSxnmxYm2g"></script>
+
+<script type="text/javascript">
+
+    "use strict";
+    var mapDisplay = document.getElementById("map-canvas");
+
+    var mapOptions = {
+
+        zoom: 12,
+
+        center: {
+            lat:  -33.856159,
+            lng: 151.215256
+        }
+    };
+
+
+    var map = new google.maps.Map(mapDisplay, mapOptions);
+
+
+
+    //_________________-------------________________-------------_____________________
+
+
+
+    function geoCodeIt(address) {
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({"address": address }, function(results, status){
+            if (status = "OK") {
+                //__---__--_--_--_--------_Marker-starts
+
+                map.setCenter(results[0].geometry.location);
+
+                var icon = {
+                    url: ("http://www.clker.com/cliparts/o/o/b/g/O/i/map-pin-hi.png"),
+                    scaledSize: new google.maps.Size(45, 45),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(0, 32)
+                };
+
+
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP,
+                    icon: icon
+
+                });
+                // -_----__--_-_----_-_--_--_--Maker-ends
+
+                // var infowindow = new google.maps.InfoWindow({
+                //     content: "<h3 style='background-color: #ffb069; font-family: 'Bangla Sangam MN''>North Indian Cuisine" + "<br>" +
+                //     "Indian Restaurant" + "<br>" + "131 Oxford St, Darlinghurst NSW 2010, Australia + \"<br>\"</h3> <a style='background-color:#276b18; color: whitesmoke' ://www.google.com/maps/place/North+Indian+Cuisine/@-33.8797366,151.2133517,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x6e0bf4e0720f3fc3!8m2!3d-33.8797371!4d151.215535' target='_blank'>View on Google Maps</a>"
+                //
+                //
+                // });
+
+
+                // infowindow.open(map,marker);
+
+                // marker.addListener("click", function(){
+                //
+                //
+                //     infowindow.open(geocoder, marker);
+                // });
+
+
+            }
+
+        });
+
+    }
+
+    // geoCodeIt("131 Oxford St, Darlinghurst NSW 2010, Australia");
+
+    var myfoodFavs = [
+
+        {
+            restaurant: "LaFonda",
+            address: "2415 N Main Ave, San Antonio, TX 78212",
+            phone: " (210) 733-0621",
+            foodStyle: "Mexican Restaurant",
+            content: "La Fonda",
+            icon: "https://cdn4.iconfinder.com/data/icons/mexican-icons-2/206/Calaverita-512.png"
+        },
+
+        {
+            restaurant: "LaBotanica",
+            address: "2911 N St Mary's St, San Antonio, TX 78212",
+            phone: "(210) 716-0702",
+            foodStyle: "Vegan Restaurant",
+            content: "La Botanica",
+            icon: "https://cdn.iconscout.com/public/images/icon/premium/png-512/vegan-symbol-397e3b7239389d22-512x512.png"
+        },
+        {
+            restaurant: "FriendlySpot",
+            address: "943 S Alamo St, San Antonio, TX 78205",
+            phone: "(210) 224-2337",
+            foodStyle: "Bar food",
+            content: "Friendly Spot",
+            icon: "https://cdn3.iconfinder.com/data/icons/pub-bar/500/pub_bar-10-512.png"
+        }
+
+    ];
+
+    myfoodFavs.forEach(function (dining) {
+        geoCodeIt(dining.address);
+        function geoCodeIt(address) {
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({"address": address}, function (results, status) {
+                if (status = "OK") {
+                    //__---__--_--_--_--------_Marker-starts
+
+                    map.setCenter(results[0].geometry.location);
+
+                    var icon = {
+                        url: dining.icon,
+                        scaledSize: new google.maps.Size(45, 45),
+                        origin: new google.maps.Point(0, 0),
+                        // The anchor for this image is the base of the flagpole at (0, 32).
+                        anchor: new google.maps.Point(0, 32)
+                    };
+
+                    var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map,
+                        draggable: true,
+                        animation: google.maps.Animation.DROP,
+                        icon: icon
+                    });
+                    // -_----__--_-_----_-_--_--_--Maker-ends
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: dining.content
+                    });
+                    marker.addListener("click", function () {
+                        infowindow.open(geocoder, marker);
+                    });
+                }
+            });
+        }
+    });
+
+    //_------____--__-_--_--_-_-_-__---_-_--_-__-__-__The Search Map Tool
+
+    var mapBtn = document.getElementById("searchBtn");
+    function userMap(){
+        var userInput = document.getElementById("fill").value;
+        event.preventDefault();
+        zoom: 15;
+        geoCodeIt(userInput);
+    }
+    mapBtn.addEventListener("click", userMap);
+
+    //________-----_____-----______-----______-----______allows you to press Enter
+
+    var form = document.getElementById("fill");
+
+    form.addEventListener("keypress", function() {
+        var userInput = document.getElementById("fill").value;
+        if(event.keyCode === 13){
+            console.log("pressed enter");
+            geoCodeIt(userInput);
+
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                icon: icon
+
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "<h3 style='background-color: #ffb069; font-family: 'Bangla Sangam MN''>Whatcha Looking For!?!" + "<br>" + "<br>\"</h3> <a style='background-color:#276b18; color: whitesmoke' ://www.google.com/maps' target='_blank'>View on Google Maps</a>"
+            });
+
+            marker.addListener("click", function(){
+                infowindow.open(geocoder, marker);
+            });
+
+
+        }
+    });
+
+    var zoomButtons = document.getElementsByClassName("zoom");
+    zoomButtons = Array.from(zoomButtons);
+    zoomButtons.forEach(function(element){
+        element.addEventListener("click", function(event){
+            var zoomLevel = event.target.getAttribute("data-zoom");
+            zoomLevel = parseInt(zoomLevel);
+            map.setZoom(zoomLevel);
+        });
+    });
+
+</script>
+
+</body>
