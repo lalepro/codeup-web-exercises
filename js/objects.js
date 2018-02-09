@@ -65,7 +65,6 @@ console.log(human.sayHello());
 
 
 
-
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -212,6 +211,299 @@ console.log(human.sayHello());
     }
     var book = createBook("To Kill A Mockingbird", "Harper Lee");
     console.log(book);
+
+    //------------------------------------JS ASSESSMENT TWO
+
+
+
+    // Write a function named isTen that accepts a number and returns a
+    // boolean that indicates whether or not that number is equal to 10.
+
+
+    function isTen(input) {
+        if (input === 10) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
+    // Write a function named double that accepts a number
+    // and returns the number doubled.
+
+
+        function double (x) {
+        var num = x * 2;
+        return num;
+    }
+
+
+
+    // Write a function named remove9s that accepts an array of numbers
+    // and returns an array with all the same numbers except for 9.
+    // learned you can put a for each loop into a function
+
+
+    function remove9s(number){
+        var outputArray = [];
+        numbers.forEach(function (number) {
+            if (number != 9) {
+                outputArray.push(number);
+            }
+        });
+            return outputArray;
+        }
+
+        //------------OR-------------------------
+
+        function remove9s(numbers){
+        return numbers.filter(function(number) {
+            return number !=9;
+        });
+
+        }
+
+
+    // Write a function named capitalizeName that accepts a
+    // string that is a first and last name separated by a
+    // space, and returns a string that that has the first
+    // and last names capitalized.
+
+        function capitalizeName(names) {
+        var str = names.toLowerCase().split(' ');
+        for (var i = 0; i < str.length; i++) {
+            str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+        }
+        return str.join(' ');
+    }
+
+    capitalizeName("laura prochaska");
+
+    //or
+
+    function capitalizeName() {
+        var nameArray = nameString.split(" ");
+        var firstName = nameArray[0];
+        var lastName = myArray[1];
+        if (firstName[0] != firstName[0].toUpperCase()){
+            var firstchar = firstName[0].toUpperCase();
+            var rest = firstName.substring(1);
+        }
+    }
+
+
+    // Write a function named capitalizeAllNames
+    // that accepts an array of strings where each
+    // string is in the format described in the
+    // previous problem, and returns an array of
+    // strings where each string contains a capitalized named.
+
+        var names = ['alex banner', 'bonnie charles', 'steve lovely', 'laura prochaska'];
+
+    function capitalizeAllNames(arrayOfnames) {
+        for (var i=0; i < names.length; i++) {
+            arrayOfNames[i] = capitalizeName(arrayOfNames[i]);
+        }
+        return arrayOfNames;
+    }
+
+    //or
+
+    function capitalizedAllNames(arrayOfNames){
+        var output = [];
+        arrayOfNames.forEach(function(element){
+            output.push(capitalizeName(element));
+        });
+    }
+
+    //or
+
+
+    function capitalizeAllNames(arrayOfNames){
+        return arrayOfNames.map(capitalizeName);
+    }
+
+
+
+    // Write a function named countVowels that accepts a
+    // string and returns the number of vowels in that
+    // string. (Don't worry about, or count "y" as a vowel)
+
+
+    function countVowels(input) {
+        string = string.toLowerCase();
+        var vowelsCount = 0;
+        var string = input.toString();
+
+        for (var i = 0; i <= string.length - 1; i++) {
+            if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+                vowelsCount += 1;
+            }
+        }
+        return vowelsCount;
+    }
+
+    //or a better way!!!
+
+function countVowel(string) {
+        var vowels = "aAeEiIoOuU";
+        var vcount = 0;
+
+    for (var i = 0; i <= string.length - 1; i++) {
+        if(vowels.indexOf(string[i] !== -1) {
+            vcount =+ 1;
+        }
+    }
+    return vcount;
+}
+
+
+    // Write a function named averageSales that accepts
+    // an array of objects where each object represents
+    // a person, and has a sales property. The function
+    // should return the average of every object's sales property.
+
+
+    var array = [
+        {
+            name: 'Jim Halpert',
+            sales: 100
+        },
+        {
+            name: 'Dwight Schrute',
+            sales: 50
+        },
+        {
+            name: 'Andy Bernard',
+            sales: 150
+        }
+    ];
+
+
+    function averageSales(array) {
+        var sum = 0;
+        for(var i = 0; i < array.length; i++){
+            sum = sum + array[i].sales;
+        }
+        sum = sum / array.length;
+        return sum;
+    }
+
+    //or
+
+    function averageSales(array) {
+        var sum = 0;
+        array.forEach(function (salesPerson) {
+            sum += salesPerson.sales;
+        });
+        return total / array.length;
+    }
+
+    //-------or
+
+    function averageSales(arr) {
+        return arr.reduce(function(arr, o) {
+            return arr + o.sales
+        }, 0) / arr.length;
+    }
+
+
+    // Write a function named analyzeWord. It
+    // should take in a string and return an
+    // object with information about the input
+    // word. The object returned should have
+    // the following properties:
+
+
+
+
+    function analyzeWord(word) {
+        return {
+            word: word,
+            numberOfLetters: word.length,
+            numberOfVowels: countVowels()
+        };
+    }
+
+    // Write a function named analyzeWord. It should take
+    // in a string and return an object with information
+    // about the input word. The object returned should
+    // have the following properties:
+
+    // analyzeAllWords(['html', 'css', 'javascript'])
+
+  var array =  [
+        {
+            word: 'html',
+            numberOfLetters: 4,
+            numberOfVowels: 0
+        },
+        {
+            word: 'css',
+            numberOfLetters: 3,
+            numberOfVowels: 0
+        },
+        {
+            word: 'javascript',
+            numberOfLetters: 10,
+            numberOfVowels: 3
+        }
+    ]
+
+
+    function analyzeAllWords(array) {
+     for(var i = 0; i < array.length; i++){
+     array[i] = analyzeWord(array[i]);
+     }
+     return array;
+
+    }
+
+    //or
+
+
+    // var arrayOfStrings = ['html', 'css', 'javascript'];
+
+
+    function analyzeAllWords(arrayOfStrings) {
+        var outputArray = [];
+        arrayOfStrings.forEach(function (element) {
+            outputArray.push(analyzeWord(element));
+        });
+    }
+    return outputArray;
+
+
+
+
+
+
+        // Write a function named padArray. It should accept 3
+    // arguments: an array, a length, and an element to fill
+    // with. If the length of the passed array is less than
+    // the passed length, the function should add the element
+    // to fill with to the end of the array until the array is
+    // the desired length and return the array. If the length of
+    // the passed array is greater than or equal to the passed
+    // length, the function should just return the array.
+
+        function padArray(array, number, input){
+            if(array.length >= number){
+                return array;
+            }
+        for(var i = 0; i < number; i ++){
+            array.push(input);
+        }
+        return array;
+    }
+
+
+
+
+
+
 
 
 

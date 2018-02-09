@@ -9,10 +9,6 @@ function average(numbers) {
     var sum = 0; //initial value
 
     for(var i = 0; i <= numbers.length-1; i++){
-        // i = 0
-        // sum = 5 + number[0]
-        // i = 1
-        // sum 6 + numbers[i]
         sum = sum + numbers[i];
 
     }
