@@ -12,6 +12,7 @@
     <div class="header">
         <h1 id="heading" class="codeup" >This is My JQuery Title</h1>
     </div>
+    <img src="images/codeup-arrow.png" alt=>
     <nav>
         <ul class="nav-links row">
             <li>Home</li>
@@ -60,14 +61,16 @@
     // $(document).ready(function () {
         "use strict";
 
-       $('h1').click(function() {
-            $(this).css("background-color", "grey");
+       $('h1').click(function(event) {
+            $(event.target).css("background-color", "grey");
         });
 
 
-        $("p").dblclick(function(){
-            $(this).css("font-size", "18px");
-        });
+        $("p").dblclick(
+            function() {
+                $(this).css("font-size", "28px");
+            }
+        );
 
         $("li").hover(
             function() {
@@ -77,6 +80,9 @@
                 $(this).css("color", "black");
             }
         );
+
+
+
 
         //
         // var title = $('#heading').text();
@@ -108,3 +114,14 @@
 
 </body>
 </html>
+
+
+<!--Events Bonus:-->
+<!-- - Make an html file called `register_new_user.html`-->
+<!-- - In it, add a registration form w/ the appropriate -->
+<!--username, email, password, and password_confirmation inputs.-->
+<!-- - Add jQuery to the page.-->
+<!-- - Add an event listener that checks to make sure all -->
+<!--inputs are not empty-->
+<!-- - Add an event handler that makes sure that the `password` -->
+<!--and `password_confirmation` inputs are the same-->
