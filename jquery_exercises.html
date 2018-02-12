@@ -14,10 +14,10 @@
     </div>
     <nav>
         <ul class="nav-links row">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Work</li>
+            <li>Contact</li>
         </ul>
     </nav>
     <div class="codeup">
@@ -31,6 +31,12 @@
             <div class="start inline">Variable</div>
             <div class="strict inline">Multiple</div>
         </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Consectetur deleniti exercitationem harum
+            incidunt iusto nesciunt officiis perferendis quos
+            vero voluptatibus. Ab accusantium architecto dolorem
+            doloribus labore laborum quibusdam voluptas voluptatem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur culpa deleniti dolor dolore ea eos ipsum neque nesciunt obcaecati odio odit officia pariatur placeat quas quidem quis repellat, repudiandae sapiente sequi ullam unde vitae voluptatibus. Dolorum error explicabo iure necessitatibus, non omnis quod recusandae, repudiandae tempora tempore, ut vel velit veritatis. Accusantium aperiam dicta distinctio, dolor explicabo facere inventore nulla quaerat quibusdam quo, reprehenderit sapiente voluptates. Esse fugit nemo repellendus. Consequuntur cum exercitationem illum ipsam libero quis sunt? Ad consequuntur, cupiditate distinctio ea explicabo, facilis hic id in libero magni, nam non nulla obcaecati omnis quibusdam quisquam ratione temporibus!</p>
             <div class="switch-container">
                 <p class="off inline">CSS and Bootstrap</p>
                 <div class="switch outter-switch inline"><div class="inner-switch"></div></div>
@@ -51,33 +57,51 @@
         crossorigin="anonymous"></script>
 
 <script>
-    $(document).ready(function () {
+    // $(document).ready(function () {
         "use strict";
 
-        var title = $('#heading').text();
-        alert(title);
-
-        var list = $('#0').text();
-        alert(list);
-
-        var border = $('.codeup');
-        border.css('border', '1px solid black');
-
-
-        var fontChange = $('#list');
-        fontChange.css('font-sze', '20px');
-
-        var multiple = $('h1, p, li');
-        multiple.css({
-            'background-color': "grey",
-            'color': 'white',
-            "font-size": '1em'
+       $('h1').click(function() {
+            $(this).css("background-color", "grey");
         });
 
 
+        $("p").dblclick(function(){
+            $(this).css("font-size", "18px");
+        });
+
+        $("li").hover(
+            function() {
+            $(this).css("color", "red");
+        },
+            function(){
+                $(this).css("color", "black");
+            }
+        );
+
+        //
+        // var title = $('#heading').text();
+        // alert(title);
+        //
+        // var list = $('#0').text();
+        // alert(list);
+        //
+        // var border = $('.codeup');
+        // border.css('border', '1px solid black');
+        //
+        //
+        // var fontChange = $('#list');
+        // fontChange.css('font-sze', '20px');
+        //
+        // var multiple = $('h1, p, li');
+        // multiple.css({
+        //     'background-color': "grey",
+        //     'color': 'white',
+        //     "font-size": '1em'
+        // });
+    // });
 
 
-    });
+
 </script>
 
 
