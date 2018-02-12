@@ -8,7 +8,42 @@
     <title>JQuery</title>
 </head>
 <body>
+<div class="container">
+    <div class="header">
+        <h1 id="heading" class="codeup" >This is My JQuery Title</h1>
+    </div>
+    <nav>
+        <ul class="nav-links row">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="codeup">
+        <div id="0" class="pad green">0</div>
+        <div id="1" class="pad red">1</div>
+        <div id="2" class="pad yellow">2</div>
+        <div id="3" class="pad blue">3</div>
+        <div class="codeup">
+            <div class="title">When Coding Works</div>
+            <div class="display inline">ID and Class</div>
+            <div class="start inline">Variable</div>
+            <div class="strict inline">Multiple</div>
+        </div>
+            <div class="switch-container">
+                <p class="off inline">CSS and Bootstrap</p>
+                <div class="switch outter-switch inline"><div class="inner-switch"></div></div>
+                <p class="on inline">Tags and Elements</p>
+            </div>
+            <ul id="list">
+                <li>Crash and Burn</li>
+                <li>Sink or Swim</li>
+                <li>Code or Bust</li>
+            </ul>
 
+    </div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -18,8 +53,25 @@
 <script>
     $(document).ready(function () {
         "use strict";
-        alert("The DOM is finished Loading");
 
+        var title = $('#heading').text();
+        alert(title);
+
+        var list = $('#0').text();
+        alert(list);
+
+        var border = $('.codeup');
+        border.css('border', '1px solid black');
+
+        var fontChange = $('#list');
+        fontChange.css('font-sze', '20px');
+
+        var multiple = $('h1, p, li');
+        multiple.css({
+            'background-color': "grey",
+            'color': 'white',
+            "font-size": '1em'
+        });
 
 
 
