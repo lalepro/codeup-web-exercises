@@ -9,42 +9,47 @@
 
     <style>
         .invisible{
-            display: none
+            display: none;
         }
+
+        /*.highlight{*/
+            /*background-color: #FFFF00;*/
+        /*}*/
     </style>
 
 </head>
 <body>
 
 <div>
-    <h1>10 NATIONAL PARKS BUCKET LIST</h1>
+    <h1>10 NATIONAL PARKS FOR YOUR BUCKET LIST</h1>
+    <a href="#" id="infoshow"><em>Click for more Information</em></a>
     <dl>
-        <dt>1. Theodore Roosevelt National Park</dt>
+        <dt class="highlight">1. Theodore Roosevelt National Park</dt>
         <dd class="invisible">Theodore Roosevelt National Park lies in western North Dakota, where the Great Plains meet the rugged Badlands. A habitat for bison, elk and prairie dogs, the sprawling park has 3 sections linked by the Little Missouri River. The park is known for the South Unit’s colorful Painted Canyon and the Maltese Cross Cabin, where President Roosevelt once lived. The Scenic Loop Drive winds past several overlooks and trails.</dd>
-        <dt>2. Great Smoky Mountains National Park</dt>
+        <dt class="highlight">2. Great Smoky Mountains National Park</dt>
         <dd class="invisible">Why go: This massive 520,000-plus acre park straddles the North Carolina-Tennessee state line and is home to one of America's oldest mountain ranges as well as a chunk of the famous Appalachian Trail. The Smokies feature traditional wilderness offerings – hikes through lush forests, along bubbling brooks and creeks, and to tucked away waterfalls.</dd>
-        <dt>3. Grand Canyon</dt>
+        <dt class="highlight">3. Grand Canyon</dt>
         <dd class="invisible">Why go: The Grand Canyon is so magnificent, even the highest quality photos don't do the park's beauty justice. You just have to see it in person. The 277-mile-long and 18-mile wide UNESCO World Heritage site offers endless hiking opportunities as well as the chance to raft the Colorado River. The turquoise waters of the Havasu Falls are also a must-see attraction.</dd>
-        <dt>4. Hawai'i Volcanoes National Park</dt>
+        <dt class="highlight">4. Hawai'i Volcanoes National Park</dt>
         <dd class="invisible">Why go: Visit this park for a chance to get up close and personal with two of the world's most active volcanoes, Mauna Loa and Kilauea. The latter continually erupts, which visitors can witness from multiple points in the park, including the famous Crater Rim Trail or along the ocean on the Chain of Craters Road.</dd>
-        <dt>5. Yellowstone</dt>
+        <dt class="highlight">5. Yellowstone</dt>
         <dd class="invisible">Why go: Even if Yellowstone didn't hold the incredible distinction of the world's first national park, the 2.2 million acre park could easily stand on its own for its unique natural attractions and diverse geography. Here, travelers can get lost in the splendor of Yellowstone's many lakes, mountains, buffalo-filled valleys and, of course, its unmatched geysers and hot springs.</dd>
-        <dt>6.Grand Teton National Park</dt>
+        <dt class="highlight">6.Grand Teton National Park</dt>
         <dd class="invisible">Why go: Jackson Hole's backcountry is a wild wonderland begging to be explored. Once home to ranchers, farmers and fur trappers, the park now offers more than 200 miles of trails that weave through breathtaking prairies, lakes and the park's most remarkable attribute, the jagged, snow-capped peaks of the Grand Teton mountains. The 11-mile Cascade Canyon Trail shows off the best of the park's striking topography. </dd>
-        <dt>7. #7 Rocky Mountain National Park</dt>
+        <dt class="highlight">7. Rocky Mountain National Park</dt>
         <dd class="invisible">Why go: The Rockies earn lots of points for their convenience. Sitting just 70 miles north of Denver, the area makes for an easy daytrip. But you could spend days exploring this park. The Rockies' magnificent landscape is one for the books, featuring 355 miles of scenic trails, 147 lakes and 77 mountains taller than 12,000 feet. </dd>
-        <dt>8. Yosemite</dt>
+        <dt class="highlight">8. Yosemite</dt>
         <dd class="invisible">Why go: California's most-visited national park stands out for its bevy of awe-inspiring waterfalls, such as Vernal Fall and Bridalveil Fall, as well as unique granite rock formations like the Half Dome and El Capitan. Whatever your itinerary may be, make sure to stop by the breathtaking Tunnel View Outlook.</dd>
-        <dt>9. Mount Rainier National Park</dt>
+        <dt class="highlight">9. Mount Rainier National Park</dt>
         <dd class="invisible">Why go: This national park's namesake comes from Mount Rainier, a 14,000-foot active volcano that is the most glaciated peak in the contiguous USA. Powder hounds will no doubt enjoy the park's winter offerings, and come springtime, surrounding valleys spout wildflowers and alpine vistas inspire awe as evergreen leaves from forests below flourish. </dd>
-        <dt>10. Zion National Park</dt>
+        <dt class="highlight">10. Zion National Park</dt>
         <dd class="invisible">Why go: This Utah national park is a paradise for thrill-seekers. Hike Angel's Landing, which brings travelers up a nearly 1,500-foot natural staircase, or trek The Narrows, a 10-mile hike through the narrowest section of Zion Canyon, which requires hikers to travel upstream through the Virgin River.</dd>
     </dl>
 </div>
-<a href="#" id="infoshow"><em>Click for more Information</em></a>
+
 <div>
-    <h5><em>Referenced Website</em><a href="https://travel.usnews.com/rankings/best-national-parks-in-the-usa/"></a></h5>
-    <h5><em>Referenced Website</em><a href="https://www.nps.gov/thro/index.htm"></a></h5>    
+    <h5><em>Referenced Website</em></h5><a href="https://travel.usnews.com/rankings/best-national-parks-in-the-usa/"></a>
+    <h5><em>Referenced Website</em></h5><a href="https://www.nps.gov/thro/index.htm"></a>
 </div>
 
 
@@ -58,11 +63,18 @@
         crossorigin="anonymous"></script>
 
 <script>
+    'use-strict';
     $(document).ready(function() {
+
         $('#infoshow').click(function(event) {
             event.preventDefault();
-            $('.invisible').toggleClass('dd');
+            $('dd').toggleClass('invisible');
         });
+
+        $( "dt" ).on("click", function(){
+            $(this).css("background-color", "yellow");
+        });
+
     });
 </script>
 
