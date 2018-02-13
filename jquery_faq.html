@@ -47,11 +47,33 @@
     </dl>
 </div>
 
-<div>
-    <h5><em>Referenced Website</em></h5><a href="https://travel.usnews.com/rankings/best-national-parks-in-the-usa/"></a>
-    <h5><em>Referenced Website</em></h5><a href="https://www.nps.gov/thro/index.htm"></a>
-</div>
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
 
+<h3>State Parks of Texas</h3>
+<ul id="state-park">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<button id="buttonColor">Click for Color Change</button>
 
 
 
@@ -74,6 +96,33 @@
         $( "dt" ).on("click", function(){
             $(this).css("background-color", "yellow");
         });
+
+        $("dt").each(function (index, element) {
+            $(element).css("background-color", "cyan");
+        });
+
+        $('#national-parks-heading').next().css('background-color', 'salmon');
+
+
+        $("#buttonColor").click(function (){
+           $("ul").each(function () {
+               $('li:last-child').css("background-color", "yellow")
+           });
+        });
+
+
+    $("h3").click(function (){
+        $(this).next().children().css("font-weight", "bold")
+        });
+
+    $("li").click(function () {
+        $(this).parent().children().first().css("color", "blue");
+    })
+
+
+
+
+
 
     });
 </script>
