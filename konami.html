@@ -6,14 +6,33 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Konami</title>
-</head>
-<body>
-<h1>Konami Code</h1>
+    <style>
+        html {
+            background: url("http://www.cutestpaw.com/wp-content/uploads/2011/11/cute-puppy1.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1 {
+            color: red;
+            font-family: cursive;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
 
-<p>Please type something into this form:</p>
-<form>
-    <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
-</form>
+</head>
+
+<body>
+<p style="text-align: center"><img id="nightMare" src="https://cdn.meme.am/instances/250x250/66928740/valentines-day-can-go-suck-it.jpg" style="position: relative; width: 1px; opacity: 0.95; padding-top: 50px"></p>
+
+<h1><img src="https://orig00.deviantart.net/2214/f/2014/173/4/f/test_animation__little_heart_by_sxaxsxoxrxi-d7ngmt7.gif" style="width:50px;">Happy Valentine's Day!<img
+        src="https://orig00.deviantart.net/2214/f/2014/173/4/f/test_animation__little_heart_by_sxaxsxoxrxi-d7ngmt7.gif" style="width:50px;"></h1>
+
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -21,19 +40,41 @@
 
 <script>
 'use strict';
-$('#textfield').keydown(function() {
-    alert('A key was pushed down!');
-});
-
-$('#textfield').keyup(function() {
-    alert('a key was released!');
-});
 
 
+function onKonamiCode(input) {
+    var string = '';
+    var key = '38384040373937396665';
+    document.addEventListener('keydown', function (e) {
+        string += ("" + e.keyCode);
+        if (string === key) {
+            return input();
+        }
+        if (!key.indexOf(string)) return;
+        string = ("" + e.keyCode);
+    });
+}
 
-$(document).keyup(function(event){
-    console.log(event.keyCode);
-});
+
+var dog = document.querySelector("#nightMare");
+var angle = 0, lastTime = null;
+function animate(time){
+    if (lastTime != null)
+        angle += (time - lastTime) * 0.02;
+    lastTime = time;
+    dog.style.top = (Math.sin(angle) * 10) + "px";
+    dog.style.right = (Math.cos(angle) * 30) + "px";
+    dog.style.width = "60%";
+    requestAnimationFrame(animate);
+}
+
+
+
+onKonamiCode(function () {requestAnimationFrame(animate)});
+
+
+
+
 
 </script>
 
