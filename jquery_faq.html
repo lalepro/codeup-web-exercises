@@ -12,16 +12,34 @@
             display: none;
         }
 
-        /*.highlight{*/
-            /*background-color: #FFFF00;*/
-        /*}*/
+        .highlight{
+            display: inline-block;
+        }
+        .parks{
+            display: none;
+        }
+        .hideRegister{
+            display: none;
+        }
+
     </style>
 
 </head>
 <body>
 
+
 <div>
     <h1>10 NATIONAL PARKS FOR YOUR BUCKET LIST</h1>
+
+    <div>
+        <span id="x">X</span>
+        <h2>Would you like to sign up for our newsletter?</h2>
+    </div>
+    <div  id="register" class="hideRegister">
+        <p>Register to <em>Our</em> Website Here for <strong>free</strong><Updatesem>!!!</Updatesem><span><button> Register <em>Now</em></button></span></p>
+
+    </div>
+
     <a href="#" id="infoshow"><em>Click for more Information</em></a>
     <dl>
         <dt class="highlight">1. Theodore Roosevelt National Park</dt>
@@ -47,16 +65,16 @@
     </dl>
 </div>
 
-<h3 id="national-parks-heading">National Parks</h3>
-<ul id="national-parks">
+<h3 id="parkTitle1">National Parks</h3>
+<ul id="parkList1" class="parks">
     <li>Arches</li>
     <li>Badlands</li>
     <li>Carlsbad Caverns</li>
     <li>Denali</li>
     <li>Everglades</li>
 </ul>
-<h3>State Parks of Texas</h3>
-<ul id="state-parks-texas">
+<h3 id="parkTitle2">State Parks of Texas</h3>
+<ul id="parkList2" class="parks">
     <li>Abilene</li>
     <li>Big Bend</li>
     <li>Choke Canyon</li>
@@ -64,8 +82,8 @@
     <li>Enchanted Rock</li>
 </ul>
 
-<h3>State Parks of Texas</h3>
-<ul id="state-park">
+<h3 id="parkTitle3">State Parks of Texas</h3>
+<ul id="parkList3" class="parks">
     <li>Abilene</li>
     <li>Big Bend</li>
     <li>Choke Canyon</li>
@@ -97,11 +115,19 @@
             $(this).css("background-color", "yellow");
         });
 
+        $("dt").on("click", function(){
+            if($(this).hasClass("highlight")){
+                $(this).removeClass("highlight");
+            }
+            else{
+                $(this).addClass('highlight');
+            }
+        });
+
         $("dt").each(function (index, element) {
             $(element).css("background-color", "cyan");
         });
 
-        $('#national-parks-heading').next().css('background-color', 'salmon');
 
 
         $("#buttonColor").click(function (){
@@ -117,12 +143,36 @@
 
     $("li").click(function () {
         $(this).parent().children().first().css("color", "blue");
-    })
+    });
 
 
 
+    //    ----------_----_-_----_--_--_----Effect #1
+
+    $("#x").click(function() {
+        $('h2').slideToggle(2000);
+        });
+
+    //------------__--_----------_-_--_---Effects #2
+
+    $("#parkTitle1").click(function () {
+       $("#parkList1").slideToggle(1000);
+    });
+
+    $("#parkTitle2").click(function () {
+        $("#parkList2").slideToggle(1000);
+    });
+
+    $("#parkTitle3").click(function () {
+        $("#parkList3").slideToggle(1000);
+    });
+
+        //---------------_-_-_--_-----_Effects#3
 
 
+    $("#register").delay(8000).fadeIn(3000);
+
+    //---_-_------_--_------------------------
 
     });
 </script>
