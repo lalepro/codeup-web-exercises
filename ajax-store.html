@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./CSS/jsonview-core.css">
+</head>
+<body>
+<h1>JSON Hardware</h1>
+
+<!--<h2>Tool Orders</h2>-->
+<!--<ul>-->
+    <!--<li>Tool: </li>-->
+<!--</ul>-->
+
+<div id="orders">
+<h3>Tools Available</h3>
+<p>Tool: </p>
+    <!--<input type="text" id="tool">-->
+<p>Quantity: </p>
+    <!--<input type="text" id="quantity">-->
+<p>Categories: </p>
+    <!--<input type="text" id="categories">-->
+<p>Price: </p>
+    <!--<input type="text" id="price">-->
+</div>
+<button id="add-order">Add</button>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+
+
+        function updatePage(){
+
+
+        var ajaxRequest = $.ajax("data/inventory.json");
+
+        ajaxRequest.done(function (data) {
+            buildHTML(data);
+            console.log(data);
+        });
+
+
+            ajaxRequest.fail(function (status) {
+                console.log(status);
+            })
+
+        }
+
+        updatePage();
+
+    //    --_-_-_-_-_-_----_-__-_--_-
+
+        function buildHTML(orders){
+            var html = "";
+            html += "p";
+            orders.forEach(function (order) {
+                html += "<p>Tool: </p>";
+                html += "<p>" + order.title + "</p>";
+                html += "<p>Quantity: </p>";
+                html += "<p>" + order.quantity + "</p>";
+                html += "<p>Categories: </p>";
+                html += "<p>" + order.categories + "</p>";
+                html += "<p>Price: </p>";
+                html += "<p>" + order.price + "</p>";
+            });
+
+            html += "p";
+            $("#orders").html(html);
+
+        }
+
+
+        $("#add-order").click(updatePage);
+        updatePage();
+
+
+
+
+
+
+
+
+
+
+    });
+
+</script>
+
+
+</body>
+</html>

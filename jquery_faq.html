@@ -24,7 +24,7 @@
     </style>
 
 </head>
-<body>
+<body class="container">
 
 
 <div>
@@ -94,8 +94,8 @@
 
 
 
-<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -105,20 +105,20 @@
     'use-strict';
     $(document).ready(function() {
 
-        $('#infoshow').click(function(event) {
+        $('#infoshow').click(function (event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });
 
-        $( "dt" ).on("click", function(){
+        $("dt").on("click", function () {
             $(this).css("background-color", "yellow");
         });
 
-        $("dt").on("click", function(){
-            if($(this).hasClass("highlight")){
+        $("dt").on("click", function () {
+            if ($(this).hasClass("highlight")) {
                 $(this).removeClass("highlight");
             }
-            else{
+            else {
                 $(this).addClass('highlight');
             }
         });
@@ -128,51 +128,60 @@
         });
 
 
-
-        $("#buttonColor").click(function (){
-           $("ul").each(function () {
-               $('li:last-child').css("background-color", "yellow")
-           });
+        $("#buttonColor").click(function () {
+            $("ul").each(function () {
+                $('li:last-child').css("background-color", "yellow")
+            });
         });
 
 
-    $("h3").click(function (){
-        $(this).next().children().css("font-weight", "bold")
+        $("h3").click(function () {
+            $(this).next().children().css("font-weight", "bold")
         });
 
-    $("li").click(function () {
-        $(this).parent().children().first().css("color", "blue");
-    });
-
-
-
-    //    ----------_----_-_----_--_--_----Effect #1
-
-    $("#x").click(function() {
-        $('#newsletter').slideToggle(2000);
+        $("li").click(function () {
+            $(this).parent().children().first().css("color", "blue");
         });
 
-    //------------__--_----------_-_--_---Effects #2
 
-    $("ul").hide();
-    $("h3").click(function () {
-       $(this).next().slideToggle(1000);
-    });
+        //    ----------_----_-_----_--_--_----Effect #1
 
+        $("#x").click(function () {
+            $('#newsletter').slideToggle(2000);
+        });
+
+        //------------__--_----------_-_--_---Effects #2
+
+        $("ul").hide();
+        $("h3").click(function () {
+            $(this).next().slideToggle(1000);
+        });
 
 
         //---------------_-_-_--_-----_Effects#3
 
 
-    $("#register").delay(8000).fadeIn(3000);
+        $("#register").delay(8000).fadeIn(3000);
 
-    //---_-_------_--_------------------------Bonus
+
+        //---_-_------_--_------------------------Bonus
+
+
+        // setTimeout(function () {
+        //     $("myModal").modal("show");
+        // }, 2000;
+
+        //--__--__-_--_-__-_--_-_-_-____----_-__-_-__-_
+
+        $.ajax("https://www.reddit.com/r/development/json").done(function (data) {
+            console.log(data)
+        });
 
 
     });
 </script>
 
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>

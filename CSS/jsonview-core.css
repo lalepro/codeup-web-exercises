@@ -1,0 +1,74 @@
+body {
+    background-color: #193549;
+    color: #E1EFFF;
+    font-family: Input, monospace;
+    white-space: pre;
+}
+
+/* Type defs */
+.property {
+    color: #3AD900;
+}
+
+.type-null {
+    color: #FF628C;
+}
+
+.type-boolean {
+    color: #FF628C;
+}
+
+.type-number {
+    color: #FF628C;
+}
+
+.type-string {
+    color: #3AD900;
+}
+
+.callback-function {
+    color: #FFA5F3;
+}
+
+/* Code collapse */
+.collapsible {
+    margin-left: 2em;
+}
+
+.collapsed > .collapser:after {
+    content: "+";
+}
+
+.collapser {
+    color: #697B88;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.collapser:after {
+    content: "-";
+}
+
+.ellipsis:after {
+    color: #697B88;
+    content: " … ";
+}
+
+/* Disabled hover color */
+.hoverable {
+    border-radius: 2px;
+    color: #E1EFFF;
+    padding: 0;
+    transition: none;
+    -webkit-transition: none;
+}
+
+.hoverable a {
+    color: #3AD900;
+}
+
+/* Use default selected bg */
+.selected {
+    background: none;
+    outline: none;
+}
