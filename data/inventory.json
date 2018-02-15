@@ -23,7 +23,15 @@
             "outdoor"
         ],
         "price": 200
-    }, {
+    },{
+    "title": "Axe",
+    "quantity": 18,
+    "categories": [
+        "tool",
+        "outdoor"
+    ],
+    "price": 15
+}, {
         "title": "Screwdrivers",
         "quantity": 25,
         "categories": [

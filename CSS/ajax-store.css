@@ -1,0 +1,8 @@
+
+body { padding-bottom: 70px; }
+
+#subject {
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+}
