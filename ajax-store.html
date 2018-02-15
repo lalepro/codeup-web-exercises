@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./CSS/jsonview-core.css">
+    <link rel="stylesheet" href="./CSS/ajax-store.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 </head>
+
+
 <body>
 <h1>JSON Hardware</h1>
 
@@ -58,7 +63,7 @@
 
         function buildHTML(orders){
             var html = "";
-            html += "p";
+            // html += "p";
             orders.forEach(function (order) {
                 html += "<p>Tool: </p>";
                 html += "<p>" + order.title + "</p>";
@@ -70,7 +75,7 @@
                 html += "<p>" + order.price + "</p>";
             });
 
-            html += "p";
+            // html += "p";
             $("#orders").html(html);
 
         }
@@ -91,7 +96,7 @@
     });
 
 </script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
