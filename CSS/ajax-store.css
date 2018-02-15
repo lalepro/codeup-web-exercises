@@ -11,3 +11,14 @@ body { padding-bottom: 70px; }
     font-size: larger;
     text-decoration: underline;
 }
+
+
+ th, td {
+    border: 3px solid ghostwhite;
+    /*border-collapse: collapse;*/
+    text-align: center;
+    align-content: center;
+    font-size: 1.5em;
+    width: 60%;
+
+}

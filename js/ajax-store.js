@@ -25,23 +25,13 @@ $(document).ready(function () {
         var html = "";
 
         orders.forEach(function (order) {
-            html += "<hr>";
-            html += "<td>Tool: </td>";
-            html += "<tr>" + order.title + "</tr>";
-            html += "<br>";
-            html += "<td>Quantity: </td>";
-            html += "<tr>" + order.quantity + "</tr>";
-            html += "<br>";
-            html += "<td>Categories: </td>";
-            // html += "<tr>" + order.categories + "</tr>";
-            html += "<ol >";
-            for(var i = 0; i < order.categories.length; i++){
-                html += "<li>" + order.categories[i] + "</li>";
-            }
-            html += "</ol>";
-            html += "<td>Price: </td>";
-            html += "<tr>" + "$" + order.price + "</tr>";
-            html += "<br>";
+            html += "<tr>";
+            html += "<td>" + order.title + "</td>";
+            html += "<td>" + order.quantity + "</td>";
+            html += "<td>" + order.categories + "</td>";
+            html += "<td>" + "$" + order.price + "</td>";
+            html += "</tr>";
+
 
         });
 
