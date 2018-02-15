@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     function buildHTML(orders){
         var html = "";
-        // html += "<hr>";
+
         orders.forEach(function (order) {
             html += "<hr>";
             html += "<td>Tool: </td>";
@@ -33,10 +33,14 @@ $(document).ready(function () {
             html += "<tr>" + order.quantity + "</tr>";
             html += "<br>";
             html += "<td>Categories: </td>";
-            html += "<tr>" + order.categories + "</tr>";
-            html += "<br>";
+            // html += "<tr>" + order.categories + "</tr>";
+            html += "<ol >";
+            for(var i = 0; i < order.categories.length; i++){
+                html += "<li>" + order.categories[i] + "</li>";
+            }
+            html += "</ol>";
             html += "<td>Price: </td>";
-            html += "<tr>" + order.price + "</tr>";
+            html += "<tr>" + "$" + order.price + "</tr>";
             html += "<br>";
 
         });

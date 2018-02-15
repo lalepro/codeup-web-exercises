@@ -1,27 +1,40 @@
+html {
+    background: url(../images/blueswirlback.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 body {
-    background-color: #193549;
+    background-color: rgba(0, 0, 0, 0.67);
     color: #E1EFFF;
     font-family: Input, monospace;
-    white-space: pre;
 }
 
 /* Type defs */
 .property {
-    color: #3AD900;
+    color: rgb(210, 255, 186);
+    text-decoration: underline;
+    text-align: center;
+    font-family: "American Typewriter";
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+#posts{
+    /*grid-column-gap: initial;*/
 
 }
 
-.type-null {
+blockquote{
     color: #FF628C;
+    text-align: center;
 }
 
-.type-boolean {
-    color: #FF628C;
-}
 
-.type-number {
-    color: #FF628C;
-}
 
 .type-string {
     color: #3AD900;

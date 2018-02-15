@@ -6,3 +6,8 @@ body { padding-bottom: 70px; }
     text-decoration: underline;
     text-align: center;
 }
+
+.line {
+    font-size: larger;
+    text-decoration: underline;
+}
