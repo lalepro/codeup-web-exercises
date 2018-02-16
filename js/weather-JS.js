@@ -25,12 +25,11 @@ $(document).ready(function(){
     var zoomButtons = document.getElementsByClassName("zoom");
 
 
-    function updatePage(userInput) {
+    function updatePage() {
         var input = document.getElementById('fill').value;
         console.log(input);
         var latlngStr = input.split(',', 2);
-        var userInput = {lat: parseFloat(latlngStr[0]).toPrecision(10), lng: parseFloat(latlngStr[1]).toPrecision(10)};
-
+        var userInput = {lat: parseFloat(latlngStr[0]).toPrecision(), lng: parseFloat(latlngStr[1]).toPrecision()};
         var lat = userInput.lat;
         var lng = userInput.lng;
         console.log(userInput);
@@ -137,7 +136,7 @@ $(document).ready(function(){
         var input = document.getElementById('fill').value;
         console.log(input);
         var latlngStr = input.split(',', 2);
-        var userInput = {lat: parseFloat(latlngStr[0]).toPrecision(10), lng: parseFloat(latlngStr[1]).toPrecision(10)};
+        var userInput = {lat: parseFloat(latlngStr[0]).toPrecision(), lng: parseFloat(latlngStr[1]).toPrecision()};
         event.preventDefault();
         zoom: 15;
         geoCodeIt(userInput);
