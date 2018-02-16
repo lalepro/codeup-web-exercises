@@ -13,9 +13,26 @@ div {
 
 
 .style, .days {
+    text-align: center;
     border: 1px solid black;
     padding: 30px;
     background: rgba(0, 95, 114, 0.69);
     color: white;
 
+}
+
+#date{
+    background-color: rgba(12, 12, 12, 0.56);
+    border: 1px solid #808080;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+img{
+    width: 80px;
+}
+
+#map-canvas {
+    width: 700px;
+    height: 500px;
 }
