@@ -1,0 +1,21 @@
+
+
+div {
+    float: left;
+
+
+}
+
+.days {
+    float: left;
+}
+
+
+
+.style, .days {
+    border: 1px solid black;
+    padding: 30px;
+    background: rgba(0, 95, 114, 0.69);
+    color: white;
+
+}
