@@ -1,8 +1,23 @@
+html {
+    background: url('../images/pexels-photo-108941.jpeg') no-repeat center center fixed;;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
 
+
+}
+
+
+body {
+    background-color: rgba(25, 53, 73, 0.36);
+    font-family: 'Righteous', cursive;
+    color: whitesmoke;
+}
 
 div {
     float: left;
-
 
 }
 
@@ -35,4 +50,8 @@ img{
 #map-canvas {
     width: 700px;
     height: 500px;
+}
+
+#searchBtn, #fill{
+    color: #000;
 }

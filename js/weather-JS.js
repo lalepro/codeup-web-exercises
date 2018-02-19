@@ -29,7 +29,7 @@ $(document).ready(function(){
         var input = document.getElementById('fill').value;
         console.log(input);
         var latlngStr = input.split(',', 2);
-        var userInput = {lat: parseFloat(latlngStr[0]).toPrecision(), lng: parseFloat(latlngStr[1]).toPrecision()};
+        var userInput = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
         var lat = userInput.lat;
         var lng = userInput.lng;
         console.log(userInput);
@@ -52,7 +52,7 @@ $(document).ready(function(){
             console.log(status);
         })
     }
-    // updatePage();
+    updatePage();
 
 
     //    --_-_-_-_-_-_----_-__-_--_-
@@ -81,8 +81,8 @@ $(document).ready(function(){
     }
 
     //
-    // $(mapBtn).click(updatePage);
-    //     updatePage();
+    $(mapBtn).click(updatePage);
+        updatePage();
 
 
 //    ---------_----_-_-_--______--______-------____-------_GOOGLE MAP FUNCTIONS-_-_-_-_-_--_-_-_--_
@@ -136,7 +136,7 @@ $(document).ready(function(){
         var input = document.getElementById('fill').value;
         console.log(input);
         var latlngStr = input.split(',', 2);
-        var userInput = {lat: parseFloat(latlngStr[0]).toPrecision(), lng: parseFloat(latlngStr[1]).toPrecision()};
+        var userInput = {lat: latlngStr[0], lng: latlngStr[1]};
         event.preventDefault();
         zoom: 15;
         geoCodeIt(userInput);
@@ -146,34 +146,34 @@ $(document).ready(function(){
 
     //________-----_____-----______-----______-----______allows you to press Enter
 
-    //
-    //
-    // form.addEventListener("keypress", function() {
-    //     var input = document.getElementById('latlng').value;
-    //     var latlngStr = input.split(',', 2);
-    //     var userInput = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
-    //     console.log(typeof userInput1);
-    //     if(event.keyCode === 13){
-    //         console.log("pressed enter");
-    //         geoCodeIt(userInput);
-    //
-    //         var marker = new google.maps.Marker({
-    //             position: results[0].geometry.location,
-    //             map: map,
-    //             draggable: true,
-    //             animation: google.maps.Animation.DROP,
-    //             icon: icon
-    //
-    //         });
-    //
-    //
-    //         marker.addListener("click", function(){
-    //             infowindow.open(geocoder, marker);
-    //         });
-    //
-    //
-    //     }
-    // });
+
+
+    form.addEventListener("keypress", function() {
+        var input = document.getElementById('latlng').value;
+        var latlngStr = input.split(',', 2);
+        var userInput = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+        console.log(typeof userInput1);
+        if(event.keyCode === 13){
+            console.log("pressed enter");
+            geoCodeIt(userInput);
+
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                icon: icon
+
+            });
+
+
+            marker.addListener("click", function(){
+                infowindow.open(geocoder, marker);
+            });
+
+
+        }
+    });
 
 
 
