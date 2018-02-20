@@ -92,36 +92,36 @@ $(document).ready(function(){
     //_________________-------------________________-------------_____________________
 
 
-
-    function geoCodeIt(latlng) {
-        var geocoder = new google.maps.LatLng(parseFloat(latlngStr[0]),parseFloat(latlngStr[1]));
-        console.log('latlng', latlng);
-        geocoder.geocode({'location': latlng}, function(results, status){
-            if (status = "OK") {
-                //__---__--_--_--_--------_Marker-starts
-
-                map.setCenter(results[0].geometry.location);
-
-                var icon = {
-                    url: ("http://www.clker.com/cliparts/o/o/b/g/O/i/map-pin-hi.png"),
-                    scaledSize: new google.maps.Size(45, 45),
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(0, 32)
-                };
-
-
-                var marker = new google.maps.Marker({
-                    position: results[0].geometry. location,
-                    map: map,
-                    draggable: true,
-                    animation: google.maps.Animation.DROP,
-                    icon: icon
-
-                });
-            }
-        });
-
-    }
+    //
+    // function geoCodeIt(latlng) {
+    //     var geocoder = new google.maps.LatLng(parseFloat(latlngStr[0]),parseFloat(latlngStr[1]));
+    //     console.log('latlng', latlng);
+    //     geocoder.geocode({'location': latlng}, function(results, status){
+    //         if (status = "OK") {
+    //             //__---__--_--_--_--------_Marker-starts
+    //
+    //             map.setCenter(results[0].geometry.location);
+    //
+    //             var icon = {
+    //                 url: ("http://www.clker.com/cliparts/o/o/b/g/O/i/map-pin-hi.png"),
+    //                 scaledSize: new google.maps.Size(45, 45),
+    //                 origin: new google.maps.Point(0, 0),
+    //                 anchor: new google.maps.Point(0, 32)
+    //             };
+    //
+    //
+    //             var marker = new google.maps.Marker({
+    //                 position: results[0].geometry. location,
+    //                 map: map,
+    //                 draggable: true,
+    //                 animation: google.maps.Animation.DROP,
+    //                 icon: icon
+    //
+    //             });
+    //         }
+    //     });
+    //
+    // }
 
 
 
@@ -153,6 +153,7 @@ $(document).ready(function(){
         if(event.keyCode === 13){
             console.log("pressed enter");
             geoCodeIt(userInput);
+            updatePage(userInput);
 
             var marker = new google.maps.Marker({
                 position: results[0].geometry.location,
@@ -165,7 +166,7 @@ $(document).ready(function(){
 
 
             marker.addListener("click", function(){
-                infowindow.open(geocoder, marker);
+                infowindow.open(buildHTML(), marker);
             });
 
 
