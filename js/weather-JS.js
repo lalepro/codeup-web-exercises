@@ -114,7 +114,7 @@ $(document).ready(function(){
 
 
                 var marker = new google.maps.Marker({
-                    position: results[0].geometry.location,
+                    position: userInput,
                     map: map,
                     draggable: true,
                     animation: google.maps.Animation.DROP,
@@ -136,7 +136,7 @@ $(document).ready(function(){
         var input = document.getElementById('fill').value;
         console.log(input);
         var latlngStr = input.split(',', 2);
-        var userInput = {lat: latlngStr[0], lng: latlngStr[1]};
+        var userInput = new google.maps.LatLng(parseFloat(latlngStr[0]),parseFloat(latlngStr[1]));
         event.preventDefault();
         zoom: 15;
         geoCodeIt(userInput);
