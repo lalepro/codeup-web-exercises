@@ -22,7 +22,6 @@ $(document).ready(function(){
 
     var map = new google.maps.Map(mapDisplay, mapOptions);
 
-    var zoomButtons = document.getElementsByClassName("zoom");
 
 
     function updatePage() {
@@ -33,8 +32,7 @@ $(document).ready(function(){
         var lat = userInput.lat;
         var lng = userInput.lng;
         console.log(userInput);
-        // destructuring
-        // var {lat, lng} = userInput;
+
 
         var request = $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "15f835fe548c0c4be88571d404daee42",
@@ -96,9 +94,8 @@ $(document).ready(function(){
 
 
     function geoCodeIt(latlng) {
-        var geocoder = new google.maps.Geocoder();
+        var geocoder = new google.maps.LatLng(parseFloat(latlngStr[0]),parseFloat(latlngStr[1]));
         console.log('latlng', latlng);
-
         geocoder.geocode({'location': latlng}, function(results, status){
             if (status = "OK") {
                 //__---__--_--_--_--------_Marker-starts
@@ -114,7 +111,7 @@ $(document).ready(function(){
 
 
                 var marker = new google.maps.Marker({
-                    position: userInput,
+                    position: results[0].geometry. location,
                     map: map,
                     draggable: true,
                     animation: google.maps.Animation.DROP,
@@ -151,7 +148,7 @@ $(document).ready(function(){
     form.addEventListener("keypress", function() {
         var input = document.getElementById('latlng').value;
         var latlngStr = input.split(',', 2);
-        var userInput = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+        var userInput = new google.maps.LatLng(parseFloat(latlngStr[0]),parseFloat(latlngStr[1]));
         console.log(typeof userInput1);
         if(event.keyCode === 13){
             console.log("pressed enter");
