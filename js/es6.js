@@ -46,18 +46,18 @@ users.push({
 let emails = [];
 let names = [];
 
-users.forEach (user => {emails.push(user.email);});
 
-
-users.forEach(user => {names.push(user.name);});
+users.forEach (user => {
+    emails.push(user.email);
+    names.push(user.name);
+});
 
 
 
 let developers = [];
 
-    users.forEach(user => {
-    const { name, email, languages } = user;
-    developers.push(`${name} email is  ${email} ${name} knows ${languages}`);
+    users.forEach(({ name, email, languages } ) => {
+    developers.push(`${name}'s email is  ${email} ${name} knows ${languages.join(', ')}`);
     });
 
 
