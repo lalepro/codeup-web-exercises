@@ -79,23 +79,35 @@ console.log(fruitsFirstLetter);
 // of objects (each user object should just have name and age properties)
 //
 //
+
+const skinny = customers.map(({name, age}) => {
+    return {
+        name,
+        age
+    };
+});
+console.log(skinny);
+
+//OR
+
 const nameAge = customers.map(customer => {return {name: customer.name, age: customer.age}});
 console.log(nameAge);
 
-const ageName = customers.reduce((acc, obj) => {
-    acc.push(obj.name);
-    acc.push(obj.age);
-
-    return acc;
-}, []);
-console.log(ageName);
+// const ageName = customers.reduce((acc, obj) => {
+//     acc.push(obj.name);
+//     acc.push(obj.age);
+//
+//     return acc;
+// }, []);
+// console.log(ageName);
 
 
 // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
 // // containing the same properties as the objects on the customers objects
 
-const civilServants = customers.filter(customer => {
-       return customer.occupation === "Teacher" || customer.occupation === "Police Officer";
+
+const civilServants = customers.filter(({occupation}) => {
+       return occupation === "Teacher" || occupation === "Police Officer";
    }
 );
 console.log(civilServants);
@@ -140,4 +152,42 @@ const family = [
 // - Create an array of all minors
 // - Calculate the total age combined of family members
 // - Create an array of only female family member objects
+var femaileFamily = family.filter(({gender}) =>{
+   return gender === "female";
+});
+console.log(minors);
+
 // - Create a single object with properties containing arrays of all names, genders, and age
+
+const ageName = family.reduce((acc, obj) => {
+    if(typeof acc.names === "undefined"){
+        acc.names =[];
+    }
+    if(typeof acc.genders === "undefined"){
+        acc.genders =[];
+    }
+    if(typeof acc.ages === "undefined"){
+        acc.ages =[];
+    }
+    acc.names.push(obj.name);
+    acc.genders.push(obj.gender);
+    acc.ages.push(obj.age);
+    return acc;
+},{});
+console.log(ageName);
+
+const skinnyArray = family.map(({name, gender, age}) => {
+    return {
+        name,
+        gender,
+        age
+    };
+});
+console.log(skinnyArray);
+
+const output = {
+    names: family.map(obj => obj.name),
+    genders: family.map(obj => obj.gender),
+    ages: family.map(obj => obj.age)
+}
+
