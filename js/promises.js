@@ -1,36 +1,50 @@
+"use-strict";
 
 let wait = (timer) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve('Finished');
+            resolve('Finished, Your promise resolved after ' + timer + " milliseconds.");
         }, timer)
     });
 };
 
 
-wait(1000).then(() => console.log('You\'ll see this after 1 second'));
-wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
-
-
+wait(1000).then((data) => console.log(data));
+wait(3000).then((data) => console.log(data));
+wait(3500).then((data) => console.log(data));
 
 
 const lastCommit = username => {
-    let dates = [];
-
-    fetch(`https://api.github.com/users/${username}/repos`,
+    return fetch(`https://api.github.com/users/${username}/events`,
         {headers: {'Authorization': '5a3726cf46a117273f58cbfd35d21cc14dd62777'}})
         .then(response => response.json())
-        .then(data => console.log(data))
-        .then(repositoties => {
-            repositoties.map(repo => {
-                dates.push(repo.updated_at);
-            });
-            dates.sort();
-            document.querySelector('span').innerText = new Date(dates[dates.length - 1]);
-        });
+        .then(events => events[0].created_at);
 };
 
-lastCommit("lalepro");
 
+//
+// const lastCommitPromise = lastCommit("lalepro");
+//
+//
+// lastCommitPromise.then(lastCommitDate => {
+//     console.log(lastCommitDate);
+//     document.querySelector('span').innerText = lastCommitDate;
+// });
+
+const users = [
+    {name: 'Laura', username: 'lalepro'},
+    {name: 'Zach', username: 'zgulde'},
+    {name: 'Ryan', username: 'ryanorsinger'},
+    {name: 'Kelsy', username: 'kelseyhightower'}
+];
+
+users.forEach(user => {
+    lastCommit(user.username).then(lastCommitDate => {
+        console.log(`${user.name}'s last commit was ${lastCommitDate}`);
+    });
+});
+
+
+node
 
 
