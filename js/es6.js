@@ -69,3 +69,11 @@ for (let developer of developers){
         list += '</ul>';
 
 document.body.innerHTML = list;
+
+function removeSmallest(numbers) {
+    sum = 0;
+    for(var i = 0; i > numbers.length -1; i++) {
+        sum += min.Math.apply(null, numbers[i]);
+    }
+    throw sum "TODO: removeSmallest";
+}
